@@ -1,0 +1,117 @@
+{
+ "home": "00-home.xml",
+ "pages": [
+  {
+   "file": "01-service-overview.xml",
+   "title": "Service Overview",
+   "labels": [
+    "doc-template",
+    "service-overview"
+   ]
+  },
+  {
+   "file": "02-architecture-overview.xml",
+   "title": "Architecture Overview",
+   "labels": [
+    "doc-template",
+    "architecture"
+   ]
+  },
+  {
+   "file": "03-adr-000-architecture-decision-record.xml",
+   "title": "ADR-000: Architecture Decision Record",
+   "labels": [
+    "doc-template",
+    "adr"
+   ]
+  },
+  {
+   "file": "04-design-document.xml",
+   "title": "Design Document",
+   "labels": [
+    "doc-template",
+    "design-doc"
+   ]
+  },
+  {
+   "file": "05-runbook.xml",
+   "title": "Runbook",
+   "labels": [
+    "doc-template",
+    "runbook"
+   ]
+  },
+  {
+   "file": "06-standard-operating-procedure.xml",
+   "title": "Standard Operating Procedure",
+   "labels": [
+    "doc-template",
+    "sop"
+   ]
+  },
+  {
+   "file": "07-troubleshooting-guide.xml",
+   "title": "Troubleshooting Guide",
+   "labels": [
+    "doc-template",
+    "troubleshooting"
+   ]
+  },
+  {
+   "file": "08-incident-postmortem.xml",
+   "title": "Incident Postmortem",
+   "labels": [
+    "doc-template",
+    "postmortem"
+   ]
+  },
+  {
+   "file": "09-api-reference.xml",
+   "title": "API Reference",
+   "labels": [
+    "doc-template",
+    "api-reference"
+   ]
+  },
+  {
+   "file": "10-configuration-reference.xml",
+   "title": "Configuration Reference",
+   "labels": [
+    "doc-template",
+    "configuration"
+   ]
+  },
+  {
+   "file": "11-release-notes.xml",
+   "title": "Release Notes",
+   "labels": [
+    "doc-template",
+    "release-notes"
+   ]
+  },
+  {
+   "file": "12-getting-started.xml",
+   "title": "Getting Started",
+   "labels": [
+    "doc-template",
+    "tutorial"
+   ]
+  },
+  {
+   "file": "13-how-to-guide.xml",
+   "title": "How-to Guide",
+   "labels": [
+    "doc-template",
+    "how-to"
+   ]
+  },
+  {
+   "file": "14-onboarding-checklist.xml",
+   "title": "Onboarding Checklist",
+   "labels": [
+    "doc-template",
+    "onboarding"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,115 @@
+<ac:layout>
+<ac:layout-section ac:type="single">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="excerpt"><ac:parameter ac:name="hidden">false</ac:parameter>
+<ac:rich-text-body>
+<p><strong><em>[One sentence: the component whose configuration this page lists.]</em></strong></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<p>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">CONFIGURATION REFERENCE</ac:parameter><ac:parameter ac:name="subtle">true</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="two_right_sidebar">
+<ac:layout-cell>
+<h2>Where configuration lives</h2>
+<table>
+<tbody>
+<tr><th>Source</th><th>Path or location</th><th>Managed by</th><th>Precedence</th></tr>
+<tr><td>Defaults</td><td><em>[Built into the binary]</em></td><td>Vendor</td><td>Lowest</td></tr>
+<tr><td>Config file</td><td><em>[/etc/example/example.yaml]</em></td><td><em>[Ansible role example]</em></td><td></td></tr>
+<tr><td>Environment variables</td><td><em>[Systemd unit drop-in]</em></td><td><em>[Ansible role example]</em></td><td></td></tr>
+<tr><td>Command-line flags</td><td><em>[Systemd ExecStart]</em></td><td><em>[Ansible role example]</em></td><td>Highest</td></tr>
+</tbody>
+</table>
+<ac:structured-macro ac:name="warning">
+<ac:rich-text-body>
+<p>Edit configuration in <em>[the source of truth]</em>, not on the host. Hand edits are overwritten on the next run.</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<h2>Options</h2>
+<h3><em>[Section: server]</em></h3>
+<table>
+<tbody>
+<tr><th>Option</th><th>Type</th><th>Default</th><th>Description</th><th>Restart</th></tr>
+<tr><td><em>[server.port]</em></td><td>integer</td><td><em>[8080]</em></td><td><em>[TCP port to listen on]</em></td><td>Yes</td></tr>
+<tr><td><em>[server.tls.enabled]</em></td><td>boolean</td><td><em>[false]</em></td><td><em>[Serve HTTPS; requires cert and key]</em></td><td>Yes</td></tr>
+<tr><td><em>[server.timeout]</em></td><td>duration</td><td><em>[30s]</em></td><td><em>[Request timeout]</em></td><td>No</td></tr>
+</tbody>
+</table>
+<h3><em>[Section: database]</em></h3>
+<table>
+<tbody>
+<tr><th>Option</th><th>Type</th><th>Default</th><th>Description</th><th>Restart</th></tr>
+<tr><td><em>[database.url]</em></td><td>string</td><td>none</td><td><em>[JDBC or DSN connection string. Required.]</em></td><td>Yes</td></tr>
+<tr><td><em>[database.pool.max]</em></td><td>integer</td><td><em>[20]</em></td><td><em>[Maximum open connections]</em></td><td>No</td></tr>
+</tbody>
+</table>
+<h2>Environment variables</h2>
+<table>
+<tbody>
+<tr><th>Variable</th><th>Overrides</th><th>Notes</th></tr>
+<tr><td><em>[EXAMPLE_DB_URL]</em></td><td><em>[database.url]</em></td><td><em>[Keeps the secret out of the file]</em></td></tr>
+<tr><td><em>[EXAMPLE_LOG_LEVEL]</em></td><td><em>[logging.level]</em></td><td></td></tr>
+</tbody>
+</table>
+<h2>Secrets</h2>
+<p><em>[Which values are secrets, where they are stored, how they are injected, and the rotation schedule.]</em></p>
+<h2>Example configuration</h2>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">yaml</ac:parameter><ac:parameter ac:name="title">Production</ac:parameter><ac:plain-text-body><![CDATA[server:
+  port: 8443
+  tls:
+    enabled: true
+    cert: /etc/example/tls/server.crt
+    key: /etc/example/tls/server.key
+database:
+  url: ${EXAMPLE_DB_URL}
+  pool:
+    max: 40]]></ac:plain-text-body></ac:structured-macro>
+<h2>Validation and reload</h2>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">bash</ac:parameter><ac:plain-text-body><![CDATA[example --config /etc/example/example.yaml --validate
+sudo systemctl reload example.service]]></ac:plain-text-body></ac:structured-macro>
+<h2>Deprecated options</h2>
+<table>
+<tbody>
+<tr><th>Option</th><th>Deprecated in</th><th>Removed in</th><th>Replacement</th></tr>
+<tr><td><em>[server.ssl]</em></td><td><em>[2.0]</em></td><td><em>[3.0]</em></td><td><em>[server.tls.enabled]</em></td></tr>
+</tbody>
+</table>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">On this page</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="toc"><ac:parameter ac:name="minLevel">2</ac:parameter><ac:parameter ac:name="maxLevel">2</ac:parameter><ac:parameter ac:name="style">none</ac:parameter><ac:parameter ac:name="indent">0px</ac:parameter></ac:structured-macro>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="details">
+<ac:rich-text-body>
+<table>
+<tbody>
+<tr><th>Document type</th><td>Configuration Reference</td></tr>
+<tr><th>Owner</th><td><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></td></tr>
+<tr><th>Status</th><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><th>Last reviewed</th><td><time datetime="2026-10-28"/></td></tr>
+<tr><th>Component</th><td><em>[Name and version]</em></td></tr>
+<tr><th>Source of truth</th><td><em>[Git repo path, Ansible role, vault path]</em></td></tr>
+</tbody>
+</table>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">About this template</ac:parameter>
+<ac:rich-text-body>
+<p>List every option, even the ones nobody changes. The value of a reference is that it is complete. Say where each setting lives, what wins when two sources disagree, and whether a change needs a restart. Delete this box when the page is done.</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+</ac:layout>

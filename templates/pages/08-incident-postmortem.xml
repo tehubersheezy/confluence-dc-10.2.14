@@ -1,0 +1,132 @@
+<ac:layout>
+<ac:layout-section ac:type="single">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="excerpt"><ac:parameter ac:name="hidden">false</ac:parameter>
+<ac:rich-text-body>
+<p><strong><em>[One sentence: what broke, for how long, and who was affected.]</em></strong></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<p>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">INCIDENT POSTMORTEM</ac:parameter><ac:parameter ac:name="subtle">true</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Red</ac:parameter><ac:parameter ac:name="title">SEV 2</ac:parameter></ac:structured-macro>
+</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="three_equal">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Severity</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DE350B</ac:parameter><ac:parameter ac:name="titleBGColor">#DE350B</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Red</ac:parameter><ac:parameter ac:name="title">SEV 2</ac:parameter></ac:structured-macro>
+</p>
+<p><em>[Why this severity]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Duration</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DE350B</ac:parameter><ac:parameter ac:name="titleBGColor">#DE350B</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p><strong><em>[1 h 45 min]</em></strong></p>
+<p><em>[14:02 to 15:47 ET]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Impact</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DE350B</ac:parameter><ac:parameter ac:name="titleBGColor">#DE350B</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p><strong><em>[1,200 users]</em></strong></p>
+<p><em>[Could not log in]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="two_right_sidebar">
+<ac:layout-cell>
+<h2>Summary</h2>
+<p><em>[Three to five sentences a manager can read on a phone: what happened, the cause, how it was fixed, and what will prevent it.]</em></p>
+<h2>Impact</h2>
+<table>
+<tbody>
+<tr><th>Who</th><th>What they experienced</th><th>Scale</th></tr>
+<tr><td><em>[Internal users in EMEA]</em></td><td><em>[Could not log in]</em></td><td><em>[About 1,200 users for 105 minutes]</em></td></tr>
+<tr><td><em>[Batch jobs]</em></td><td><em>[Delayed, no data loss]</em></td><td><em>[14 jobs]</em></td></tr>
+</tbody>
+</table>
+<h2>Timeline</h2>
+<p>All times <em>[timezone]</em>.</p>
+<table>
+<tbody>
+<tr><th>Time</th><th>Event</th><th>Source</th></tr>
+<tr><td><em>[13:40]</em></td><td><em>[Change deployed: certificate rotation on the load balancer]</em></td><td><em>[Change CHG0012345]</em></td></tr>
+<tr><td><em>[14:02]</em></td><td><em>[First alert: HTTP 5xx rate above 5%]</em></td><td><em>[Monitoring]</em></td></tr>
+<tr><td><em>[14:10]</em></td><td><em>[On-call acknowledged, incident opened]</em></td><td><em>[Incident channel]</em></td></tr>
+<tr><td><em>[14:35]</em></td><td><em>[Cause identified: intermediate certificate missing from the chain]</em></td><td><em>[Incident channel]</em></td></tr>
+<tr><td><em>[15:47]</em></td><td><em>[Fix verified, incident resolved]</em></td><td><em>[Monitoring]</em></td></tr>
+</tbody>
+</table>
+<h2>Root cause</h2>
+<p><em>[The technical cause in plain terms, then the "why" behind it: why the system allowed it and why the process did not catch it.]</em></p>
+<h2>Contributing factors</h2>
+<ul><li><em>[Condition that made the incident possible or worse, for example: no staging validation of certificate chains]</em></li><li><em>[Condition]</em></li></ul>
+<h2>Detection</h2>
+<p><em>[How we found out. Monitoring or a user report? How long between the fault and the first alert?]</em></p>
+<h2>Response</h2>
+<p><em>[What slowed or sped up the response: access, documentation, tooling, communication.]</em></p>
+<h2>What went well</h2>
+<ul><li><em>[Something that worked and should be kept]</em></li></ul>
+<h2>What went poorly</h2>
+<ul><li><em>[Something that failed or was missing]</em></li></ul>
+<h2>Where we got lucky</h2>
+<ul><li><em>[Something that could have made this much worse but did not, by chance]</em></li></ul>
+<h2>Action items</h2>
+<p>Each item has one owner and a due date. Prevention items come first.</p>
+<ac:task-list>
+<ac:task><ac:task-id>1</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link> <strong>Prevent:</strong> <em>[Add certificate chain check to the deployment pipeline]</em> <time datetime="2026-11-15"/></ac:task-body></ac:task>
+<ac:task><ac:task-id>2</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link> <strong>Detect:</strong> <em>[Alert on TLS handshake failures, not just 5xx rate]</em> <time datetime="2026-11-15"/></ac:task-body></ac:task>
+<ac:task><ac:task-id>3</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link> <strong>Mitigate:</strong> <em>[Write the rollback runbook for load balancer certificate changes]</em> <time datetime="2026-11-30"/></ac:task-body></ac:task>
+</ac:task-list>
+<h2>Lessons learned</h2>
+<p><em>[What the organization should take from this beyond the action items.]</em></p>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">On this page</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="toc"><ac:parameter ac:name="minLevel">2</ac:parameter><ac:parameter ac:name="maxLevel">2</ac:parameter><ac:parameter ac:name="style">none</ac:parameter><ac:parameter ac:name="indent">0px</ac:parameter></ac:structured-macro>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="details">
+<ac:rich-text-body>
+<table>
+<tbody>
+<tr><th>Document type</th><td>Incident Postmortem</td></tr>
+<tr><th>Owner</th><td><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></td></tr>
+<tr><th>Status</th><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><th>Last reviewed</th><td><time datetime="2026-10-28"/></td></tr>
+<tr><th>Incident</th><td>
+<ac:structured-macro ac:name="jira"><ac:parameter ac:name="serverId">{{JIRA_APPLINK_ID}}</ac:parameter><ac:parameter ac:name="key">ASDF-1</ac:parameter><ac:parameter ac:name="showSummary">true</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><th>Severity</th><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Red</ac:parameter><ac:parameter ac:name="title">SEV 2</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><th>Started</th><td><em>[2026-10-27 14:02 ET]</em></td></tr>
+<tr><th>Resolved</th><td><em>[2026-10-27 15:47 ET]</em></td></tr>
+<tr><th>Incident commander</th><td><em>[Role or rotation]</em></td></tr>
+</tbody>
+</table>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">About this template</ac:parameter>
+<ac:rich-text-body>
+<p>Blameless. Describe what people knew and did at the time, not what they should have done. Name systems and roles, not individuals. Finish the draft within five business days of resolution and review it with everyone who was on the incident. Delete this box when the page is done.</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+</ac:layout>

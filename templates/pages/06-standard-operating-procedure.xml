@@ -1,0 +1,104 @@
+<ac:layout>
+<ac:layout-section ac:type="single">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="excerpt"><ac:parameter ac:name="hidden">false</ac:parameter>
+<ac:rich-text-body>
+<p><strong><em>[One sentence: the process this procedure governs.]</em></strong></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<p>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">STANDARD OPERATING PROCEDURE</ac:parameter><ac:parameter ac:name="subtle">true</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Blue</ac:parameter><ac:parameter ac:name="title">V1.0</ac:parameter></ac:structured-macro>
+</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="two_right_sidebar">
+<ac:layout-cell>
+<h2>1. Purpose</h2>
+<p><em>[Why this procedure exists and what outcome it guarantees.]</em></p>
+<h2>2. Scope</h2>
+<p><em>[Which systems, teams, locations, and situations it applies to. Name what is excluded.]</em></p>
+<h2>3. Roles and responsibilities</h2>
+<table>
+<tbody>
+<tr><th>Role</th><th>Responsible for</th><th>Held by</th></tr>
+<tr><td><em>[Requester]</em></td><td><em>[Submits the request with required details]</em></td><td><em>[Any employee]</em></td></tr>
+<tr><td><em>[Approver]</em></td><td><em>[Reviews and approves within 2 business days]</em></td><td><em>[Service owner]</em></td></tr>
+<tr><td><em>[Executor]</em></td><td><em>[Performs the procedure and records evidence]</em></td><td><em>[Operations team]</em></td></tr>
+</tbody>
+</table>
+<h2>4. Definitions</h2>
+<table>
+<tbody>
+<tr><th>Term</th><th>Meaning</th></tr>
+<tr><td><em>[Term]</em></td><td><em>[Definition as used in this document]</em></td></tr>
+</tbody>
+</table>
+<h2>5. Policy references</h2>
+<ul><li><em>[Policy name and link, for example: Access Control Policy]</em></li><li><em>[Control framework reference, for example: SOX ITGC, ISO 27001 A.9]</em></li></ul>
+<h2>6. Procedure</h2>
+<h3>6.1 <em>[Phase, for example: Request]</em></h3>
+<ol><li><em>[Who does what, in what system, with what inputs]</em></li><li><em>[Step]</em></li></ol>
+<h3>6.2 <em>[Phase, for example: Approval]</em></h3>
+<ol><li><em>[Step]</em></li></ol>
+<h3>6.3 <em>[Phase, for example: Execution]</em></h3>
+<ol><li><em>[Step. Link the technical runbook rather than repeating commands here.]</em></li></ol>
+<h3>6.4 Exceptions</h3>
+<p><em>[When the procedure may be bypassed, who can approve that, and how it is recorded.]</em></p>
+<h2>7. Records and evidence</h2>
+<table>
+<tbody>
+<tr><th>Record</th><th>Where kept</th><th>Retention</th></tr>
+<tr><td><em>[Approval ticket]</em></td><td><em>[ServiceNow]</em></td><td><em>[7 years]</em></td></tr>
+<tr><td><em>[Execution log]</em></td><td><em>[Runbook history table]</em></td><td><em>[2 years]</em></td></tr>
+</tbody>
+</table>
+<h2>8. Metrics</h2>
+<p><em>[How compliance with this SOP is measured and reported, for example: percentage of requests approved before execution, reviewed monthly.]</em></p>
+<h2>9. Revision history</h2>
+<table>
+<tbody>
+<tr><th>Version</th><th>Date</th><th>Author</th><th>Change</th><th>Approved by</th></tr>
+<tr><td>1.0</td><td><time datetime="2026-10-28"/></td><td><em>[Name]</em></td><td>Initial release</td><td><em>[Name]</em></td></tr>
+</tbody>
+</table>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">On this page</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="toc"><ac:parameter ac:name="minLevel">2</ac:parameter><ac:parameter ac:name="maxLevel">2</ac:parameter><ac:parameter ac:name="style">none</ac:parameter><ac:parameter ac:name="indent">0px</ac:parameter></ac:structured-macro>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="details">
+<ac:rich-text-body>
+<table>
+<tbody>
+<tr><th>Document type</th><td>Standard Operating Procedure</td></tr>
+<tr><th>Owner</th><td><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></td></tr>
+<tr><th>Status</th><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><th>Last reviewed</th><td><time datetime="2026-10-28"/></td></tr>
+<tr><th>SOP ID</th><td><em>[SOP-IT-001]</em></td></tr>
+<tr><th>Version</th><td>1.0</td></tr>
+<tr><th>Approver</th><td><em>[Name, title]</em></td></tr>
+<tr><th>Effective date</th><td><time datetime="2026-11-01"/></td></tr>
+<tr><th>Review cycle</th><td><em>[Annual]</em></td></tr>
+<tr><th>Next review</th><td><time datetime="2027-11-01"/></td></tr>
+</tbody>
+</table>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">About this template</ac:parameter>
+<ac:rich-text-body>
+<p>A controlled document: it has an ID, an approver, a review cycle, and a revision history. Use it for processes with compliance or audit weight. For a purely technical procedure, use the Runbook template instead. Delete this box when the page is done.</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+</ac:layout>

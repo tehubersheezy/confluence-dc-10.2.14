@@ -1,0 +1,128 @@
+<ac:layout>
+<ac:layout-section ac:type="single">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="excerpt"><ac:parameter ac:name="hidden">false</ac:parameter>
+<ac:rich-text-body>
+<p><strong><em>[One sentence: what this procedure does and when to run it.]</em></strong></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<p>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">RUNBOOK</ac:parameter><ac:parameter ac:name="subtle">true</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Green</ac:parameter><ac:parameter ac:name="title">LOW RISK</ac:parameter></ac:structured-macro>
+</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="three_equal">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Trigger</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#0052CC</ac:parameter><ac:parameter ac:name="titleBGColor">#0052CC</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p><em>[Alert name, ticket type, or schedule]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Risk and duration</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#0052CC</ac:parameter><ac:parameter ac:name="titleBGColor">#0052CC</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Green</ac:parameter><ac:parameter ac:name="title">LOW</ac:parameter></ac:structured-macro>
+ <em>[Typical time to complete]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Access needed</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#0052CC</ac:parameter><ac:parameter ac:name="titleBGColor">#0052CC</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p><em>[Roles, groups, VPN, bastion]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="two_right_sidebar">
+<ac:layout-cell>
+<h2>When to use this</h2>
+<p><em>[The exact symptom or event. Link the alert. Say when not to use it and which runbook to use instead.]</em></p>
+<h2>Prerequisites</h2>
+<ac:task-list>
+<ac:task><ac:task-id>1</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[Access confirmed, for example: can SSH to the host]</em></ac:task-body></ac:task>
+<ac:task><ac:task-id>2</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[Change ticket opened or maintenance window confirmed]</em></ac:task-body></ac:task>
+<ac:task><ac:task-id>3</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[Stakeholders notified in the support channel]</em></ac:task-body></ac:task>
+</ac:task-list>
+<h2>Steps</h2>
+<h3>1. <em>[Confirm the problem]</em></h3>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">bash</ac:parameter><ac:plain-text-body><![CDATA[systemctl status example.service]]></ac:plain-text-body></ac:structured-macro>
+<p><strong>Expected:</strong> <em>[What a healthy or unhealthy result looks like.]</em></p>
+<h3>2. <em>[Take the corrective action]</em></h3>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">bash</ac:parameter><ac:plain-text-body><![CDATA[sudo systemctl restart example.service]]></ac:plain-text-body></ac:structured-macro>
+<p><strong>Expected:</strong> <em>[Result.]</em></p>
+<ac:structured-macro ac:name="warning"><ac:parameter ac:name="title">Before you continue</ac:parameter>
+<ac:rich-text-body>
+<p><em>[Anything irreversible or customer-visible in the next step.]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<h3>3. <em>[Next step]</em></h3>
+<p><em>[Step.]</em></p>
+<h2>Verification</h2>
+<ac:task-list>
+<ac:task><ac:task-id>4</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[Alert has cleared]</em></ac:task-body></ac:task>
+<ac:task><ac:task-id>5</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[Dashboard shows normal values for 10 minutes]</em></ac:task-body></ac:task>
+<ac:task><ac:task-id>6</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[A test request succeeds end to end]</em></ac:task-body></ac:task>
+</ac:task-list>
+<h2>Rollback</h2>
+<p><em>[How to undo each step if verification fails. If a step cannot be undone, say so here and in the warning above.]</em></p>
+<h2>Escalation</h2>
+<table>
+<tbody>
+<tr><th>If</th><th>Contact</th><th>How</th></tr>
+<tr><td><em>[Verification fails after rollback]</em></td><td><em>[Secondary on-call]</em></td><td><em>[Page via rotation]</em></td></tr>
+<tr><td><em>[Vendor component is involved]</em></td><td><em>[Vendor support]</em></td><td><em>[Portal link, contract number]</em></td></tr>
+</tbody>
+</table>
+<h2>Close out</h2>
+<ul><li><em>[Update the ticket with what was done]</em></li><li><em>[Post in the support channel]</em></li><li><em>[If this took more than N minutes or happened twice this month, open a problem record]</em></li></ul>
+<h2>History</h2>
+<table>
+<tbody>
+<tr><th>Date</th><th>Run by</th><th>Outcome</th><th>Notes</th></tr>
+<tr><td><time datetime="2026-10-28"/></td><td><em>[Name]</em></td><td><em>[Resolved / Escalated]</em></td><td><em>[What was different this time]</em></td></tr>
+</tbody>
+</table>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">On this page</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="toc"><ac:parameter ac:name="minLevel">2</ac:parameter><ac:parameter ac:name="maxLevel">2</ac:parameter><ac:parameter ac:name="style">none</ac:parameter><ac:parameter ac:name="indent">0px</ac:parameter></ac:structured-macro>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="details">
+<ac:rich-text-body>
+<table>
+<tbody>
+<tr><th>Document type</th><td>Runbook</td></tr>
+<tr><th>Owner</th><td><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></td></tr>
+<tr><th>Status</th><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><th>Last reviewed</th><td><time datetime="2026-10-28"/></td></tr>
+<tr><th>Service</th><td><ac:link><ri:page ri:content-title="Service Overview"/></ac:link></td></tr>
+<tr><th>Risk</th><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Green</ac:parameter><ac:parameter ac:name="title">LOW</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><th>Duration</th><td><em>[Typical time]</em></td></tr>
+<tr><th>Change approval</th><td><em>[Standard change / CAB / none]</em></td></tr>
+</tbody>
+</table>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">About this template</ac:parameter>
+<ac:rich-text-body>
+<p>Write for someone paged at 3 a.m. who has never touched this system. Every step is a command or a click with the expected result. If a step needs judgment, say what to look for and what to do in each case. Delete this box when the page is done.</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+</ac:layout>

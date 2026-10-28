@@ -1,0 +1,153 @@
+<ac:layout>
+<ac:layout-section ac:type="single">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="excerpt"><ac:parameter ac:name="hidden">false</ac:parameter>
+<ac:rich-text-body>
+<p><strong><em>[One sentence: the system this guide covers.]</em></strong></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<p>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">TROUBLESHOOTING GUIDE</ac:parameter><ac:parameter ac:name="subtle">true</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="three_equal">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Logs</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#FF991F</ac:parameter><ac:parameter ac:name="titleBGColor">#FF991F</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p><em>[Where logs live, with a link to the search]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Dashboard</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#FF991F</ac:parameter><ac:parameter ac:name="titleBGColor">#FF991F</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p><em>[Link to the health dashboard]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Escalate to</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#FF991F</ac:parameter><ac:parameter ac:name="titleBGColor">#FF991F</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p><em>[L2 team or rotation]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="two_right_sidebar">
+<ac:layout-cell>
+<h2>Quick triage</h2>
+<table>
+<tbody>
+<tr><th>Symptom</th><th>Most likely cause</th><th>Go to</th></tr>
+<tr><td><em>[Users see HTTP 502]</em></td><td><em>[Backend pool unhealthy]</em></td><td><ac:link ac:anchor="symptom-1"><ac:plain-text-link-body><![CDATA[Symptom 1]]></ac:plain-text-link-body></ac:link></td></tr>
+<tr><td><em>[Login loops back to the sign-in page]</em></td><td><em>[Clock skew with the identity provider]</em></td><td><ac:link ac:anchor="symptom-2"><ac:plain-text-link-body><![CDATA[Symptom 2]]></ac:plain-text-link-body></ac:link></td></tr>
+<tr><td><em>[Jobs stuck in queued]</em></td><td><em>[Worker process stopped]</em></td><td><ac:link ac:anchor="symptom-3"><ac:plain-text-link-body><![CDATA[Symptom 3]]></ac:plain-text-link-body></ac:link></td></tr>
+</tbody>
+</table>
+<h2>First five minutes</h2>
+<p>Run these before anything else. They rule out the common causes.</p>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">bash</ac:parameter><ac:parameter ac:name="title">Health check</ac:parameter><ac:plain-text-body><![CDATA[systemctl status example.service
+curl -sS -o /dev/null -w '%{http_code}\n' https://example.internal/health
+df -h /var
+journalctl -u example.service --since '15 min ago' | tail -50]]></ac:plain-text-body></ac:structured-macro>
+<ac:structured-macro ac:name="anchor"><ac:parameter ac:name="">symptom-1</ac:parameter></ac:structured-macro>
+<h2>Symptom 1: <em>[Users see HTTP 502]</em></h2>
+<p><strong>What you will see:</strong> <em>[Exact error text, where it appears, which users.]</em></p>
+<h3>Diagnose</h3>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">bash</ac:parameter><ac:plain-text-body><![CDATA[# command that confirms or rules out the cause]]></ac:plain-text-body></ac:structured-macro>
+<p><strong>If the output shows</strong> <em>[X]</em>, the cause is <em>[backend pool unhealthy]</em>. Continue below. Otherwise go to <ac:link ac:anchor="escalation"><ac:plain-text-link-body><![CDATA[Escalation]]></ac:plain-text-link-body></ac:link>.</p>
+<h3>Fix</h3>
+<ol><li><em>[Step]</em></li><li><em>[Step]</em></li></ol>
+<h3>Confirm</h3>
+<p><em>[What proves it is fixed.]</em></p>
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">If that did not work</ac:parameter>
+<ac:rich-text-body>
+<p><em>[Less common causes with the same symptom, each with a diagnostic and a fix.]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="anchor"><ac:parameter ac:name="">symptom-2</ac:parameter></ac:structured-macro>
+<h2>Symptom 2: <em>[Login loops back to the sign-in page]</em></h2>
+<p><strong>What you will see:</strong> <em>[Exact error text, where it appears, which users.]</em></p>
+<h3>Diagnose</h3>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">bash</ac:parameter><ac:plain-text-body><![CDATA[# command that confirms or rules out the cause]]></ac:plain-text-body></ac:structured-macro>
+<p><strong>If the output shows</strong> <em>[X]</em>, the cause is <em>[clock skew]</em>. Continue below. Otherwise go to <ac:link ac:anchor="escalation"><ac:plain-text-link-body><![CDATA[Escalation]]></ac:plain-text-link-body></ac:link>.</p>
+<h3>Fix</h3>
+<ol><li><em>[Step]</em></li><li><em>[Step]</em></li></ol>
+<h3>Confirm</h3>
+<p><em>[What proves it is fixed.]</em></p>
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">If that did not work</ac:parameter>
+<ac:rich-text-body>
+<p><em>[Less common causes with the same symptom, each with a diagnostic and a fix.]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="anchor"><ac:parameter ac:name="">symptom-3</ac:parameter></ac:structured-macro>
+<h2>Symptom 3: <em>[Jobs stuck in queued]</em></h2>
+<p><strong>What you will see:</strong> <em>[Exact error text, where it appears, which users.]</em></p>
+<h3>Diagnose</h3>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">bash</ac:parameter><ac:plain-text-body><![CDATA[# command that confirms or rules out the cause]]></ac:plain-text-body></ac:structured-macro>
+<p><strong>If the output shows</strong> <em>[X]</em>, the cause is <em>[worker process stopped]</em>. Continue below. Otherwise go to <ac:link ac:anchor="escalation"><ac:plain-text-link-body><![CDATA[Escalation]]></ac:plain-text-link-body></ac:link>.</p>
+<h3>Fix</h3>
+<ol><li><em>[Step]</em></li><li><em>[Step]</em></li></ol>
+<h3>Confirm</h3>
+<p><em>[What proves it is fixed.]</em></p>
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">If that did not work</ac:parameter>
+<ac:rich-text-body>
+<p><em>[Less common causes with the same symptom, each with a diagnostic and a fix.]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<h2>Known issues</h2>
+<table>
+<tbody>
+<tr><th>Issue</th><th>Workaround</th><th>Tracking</th></tr>
+<tr><td><em>[Description]</em></td><td><em>[Temporary fix]</em></td><td><em>[Ticket or vendor case]</em></td></tr>
+</tbody>
+</table>
+<ac:structured-macro ac:name="anchor"><ac:parameter ac:name="">escalation</ac:parameter></ac:structured-macro>
+<h2>Escalation</h2>
+<p>Before escalating, collect: <em>[timestamps, affected users, request IDs, the output of the health check above]</em>.</p>
+<table>
+<tbody>
+<tr><th>Level</th><th>Who</th><th>When</th></tr>
+<tr><td>L2</td><td><em>[Team or rotation]</em></td><td><em>[Symptom not listed here, or fix failed]</em></td></tr>
+<tr><td>L3</td><td><em>[Engineering owner]</em></td><td><em>[Data loss, security, or more than 30 minutes of impact]</em></td></tr>
+<tr><td>Vendor</td><td><em>[Vendor support]</em></td><td><em>[Fault inside the vendor product]</em></td></tr>
+</tbody>
+</table>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">On this page</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="toc"><ac:parameter ac:name="minLevel">2</ac:parameter><ac:parameter ac:name="maxLevel">2</ac:parameter><ac:parameter ac:name="style">none</ac:parameter><ac:parameter ac:name="indent">0px</ac:parameter></ac:structured-macro>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="details">
+<ac:rich-text-body>
+<table>
+<tbody>
+<tr><th>Document type</th><td>Troubleshooting Guide</td></tr>
+<tr><th>Owner</th><td><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></td></tr>
+<tr><th>Status</th><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><th>Last reviewed</th><td><time datetime="2026-10-28"/></td></tr>
+<tr><th>Service</th><td><ac:link><ri:page ri:content-title="Service Overview"/></ac:link></td></tr>
+<tr><th>Logs</th><td><em>[Link]</em></td></tr>
+<tr><th>Dashboard</th><td><em>[Link]</em></td></tr>
+</tbody>
+</table>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">About this template</ac:parameter>
+<ac:rich-text-body>
+<p>Organize by symptom, not by component. People arrive with an error message, not a diagnosis. Put the triage table first so they can jump straight to their case. Add a symptom section every time a ticket teaches you something. Delete this box when the page is done.</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+</ac:layout>

@@ -1,0 +1,68 @@
+<ac:layout>
+<ac:layout-section ac:type="single">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<p><strong>Technical documentation templates for the IT organization.</strong></p>
+<p>Pick a template below, create a child page from it, and fill in the bracketed placeholders. Every template shares the same layout: a summary band, a sidebar with page properties, and a collapsed note explaining how to use it.</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="three_equal">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Design and decide</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#00A3BF</ac:parameter><ac:parameter ac:name="titleBGColor">#00A3BF</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<ul><li><ac:link><ri:page ri:content-title="Service Overview"/></ac:link></li><li><ac:link><ri:page ri:content-title="Architecture Overview"/></ac:link></li><li><ac:link><ri:page ri:content-title="ADR-000: Architecture Decision Record"/></ac:link></li><li><ac:link><ri:page ri:content-title="Design Document"/></ac:link></li></ul>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Operate</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#0052CC</ac:parameter><ac:parameter ac:name="titleBGColor">#0052CC</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<ul><li><ac:link><ri:page ri:content-title="Runbook"/></ac:link></li><li><ac:link><ri:page ri:content-title="Standard Operating Procedure"/></ac:link></li><li><ac:link><ri:page ri:content-title="Troubleshooting Guide"/></ac:link></li><li><ac:link><ri:page ri:content-title="Incident Postmortem"/></ac:link></li></ul>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Reference and learn</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#00875A</ac:parameter><ac:parameter ac:name="titleBGColor">#00875A</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<ul><li><ac:link><ri:page ri:content-title="API Reference"/></ac:link></li><li><ac:link><ri:page ri:content-title="Configuration Reference"/></ac:link></li><li><ac:link><ri:page ri:content-title="Release Notes"/></ac:link></li><li><ac:link><ri:page ri:content-title="Getting Started"/></ac:link></li><li><ac:link><ri:page ri:content-title="How-to Guide"/></ac:link></li><li><ac:link><ri:page ri:content-title="Onboarding Checklist"/></ac:link></li></ul>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="single">
+<ac:layout-cell>
+<h2>How to choose</h2>
+<table>
+<tbody>
+<tr><th>You need to…</th><th>Use</th></tr>
+<tr><td>Explain what a service is and who owns it</td><td><ac:link><ri:page ri:content-title="Service Overview"/></ac:link></td></tr>
+<tr><td>Describe how a system is built</td><td><ac:link><ri:page ri:content-title="Architecture Overview"/></ac:link></td></tr>
+<tr><td>Record a decision and why</td><td><ac:link><ri:page ri:content-title="ADR-000: Architecture Decision Record"/></ac:link></td></tr>
+<tr><td>Propose a change before building it</td><td><ac:link><ri:page ri:content-title="Design Document"/></ac:link></td></tr>
+<tr><td>Tell someone how to handle an alert or routine task</td><td><ac:link><ri:page ri:content-title="Runbook"/></ac:link></td></tr>
+<tr><td>Define a controlled process with approvals and audit trail</td><td><ac:link><ri:page ri:content-title="Standard Operating Procedure"/></ac:link></td></tr>
+<tr><td>Help people diagnose a problem by symptom</td><td><ac:link><ri:page ri:content-title="Troubleshooting Guide"/></ac:link></td></tr>
+<tr><td>Write up an incident after it is resolved</td><td><ac:link><ri:page ri:content-title="Incident Postmortem"/></ac:link></td></tr>
+<tr><td>Document an API, its auth, and its errors</td><td><ac:link><ri:page ri:content-title="API Reference"/></ac:link></td></tr>
+<tr><td>List every setting a component accepts</td><td><ac:link><ri:page ri:content-title="Configuration Reference"/></ac:link></td></tr>
+<tr><td>Announce a version</td><td><ac:link><ri:page ri:content-title="Release Notes"/></ac:link></td></tr>
+<tr><td>Walk a newcomer to a first working result</td><td><ac:link><ri:page ri:content-title="Getting Started"/></ac:link></td></tr>
+<tr><td>Give a recipe for one task</td><td><ac:link><ri:page ri:content-title="How-to Guide"/></ac:link></td></tr>
+<tr><td>Bring a new team member up to speed</td><td><ac:link><ri:page ri:content-title="Onboarding Checklist"/></ac:link></td></tr>
+</tbody>
+</table>
+<h2>Conventions</h2>
+<ul><li>Every page starts with a one-sentence summary in the header band. It is an excerpt, so other pages can pull it in.</li><li>Page properties hold Owner, Status, and Last reviewed. The report below reads them, so keep the labels as they are.</li><li>Status lozenges: 
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Yellow</ac:parameter><ac:parameter ac:name="title">IN REVIEW</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Green</ac:parameter><ac:parameter ac:name="title">APPROVED</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Red</ac:parameter><ac:parameter ac:name="title">DEPRECATED</ac:parameter></ac:structured-macro>
+</li><li>Bracketed italic text is a placeholder. A page is not done until none are left.</li></ul>
+<h2>All templates</h2>
+<ac:structured-macro ac:name="detailssummary"><ac:parameter ac:name="cql">label = "doc-template" and space = currentSpace()</ac:parameter><ac:parameter ac:name="headings">Document type,Owner,Status,Last reviewed</ac:parameter><ac:parameter ac:name="firstcolumn">Template</ac:parameter></ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+</ac:layout>

@@ -1,0 +1,91 @@
+<ac:layout>
+<ac:layout-section ac:type="single">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="excerpt"><ac:parameter ac:name="hidden">false</ac:parameter>
+<ac:rich-text-body>
+<p><strong><em>[One sentence: what the reader will have working by the end.]</em></strong></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<p>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">GETTING STARTED</ac:parameter><ac:parameter ac:name="subtle">true</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Blue</ac:parameter><ac:parameter ac:name="title">20 MIN</ac:parameter></ac:structured-macro>
+</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="two_right_sidebar">
+<ac:layout-cell>
+<h2>What you will build</h2>
+<p><em>[The concrete result at the end: a running service, a first deployment, a working query. Show a screenshot or output sample.]</em></p>
+<h2>Before you begin</h2>
+<table>
+<tbody>
+<tr><th>Requirement</th><th>How to check</th></tr>
+<tr><td><em>[Access to the environment]</em></td><td><em>[You can log in at the URL]</em></td></tr>
+<tr><td><em>[Tool installed, version X or later]</em></td><td>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">bash</ac:parameter><ac:plain-text-body><![CDATA[example --version]]></ac:plain-text-body></ac:structured-macro>
+</td></tr>
+<tr><td><em>[Time: about 20 minutes]</em></td><td></td></tr>
+</tbody>
+</table>
+<h2>Step 1: <em>[Install]</em></h2>
+<p><em>[One action per step. Tell the reader exactly what to type and what they will see.]</em></p>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">bash</ac:parameter><ac:plain-text-body><![CDATA[brew install example]]></ac:plain-text-body></ac:structured-macro>
+<p>You should see: <em>[the last line of successful output]</em>.</p>
+<h2>Step 2: <em>[Configure]</em></h2>
+<p><em>[Keep choices out of a tutorial. Give the one value that works and say where the options are documented.]</em></p>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">bash</ac:parameter><ac:plain-text-body><![CDATA[example init --name demo]]></ac:plain-text-body></ac:structured-macro>
+<h2>Step 3: <em>[Run it]</em></h2>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">bash</ac:parameter><ac:plain-text-body><![CDATA[example run]]></ac:plain-text-body></ac:structured-macro>
+<ac:structured-macro ac:name="tip"><ac:parameter ac:name="title">If it does not start</ac:parameter>
+<ac:rich-text-body>
+<p><em>[The one thing that trips people up at this step, and how to tell it happened.]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<h2>Check your work</h2>
+<ac:task-list>
+<ac:task><ac:task-id>1</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[The service answers at http://localhost:8080]</em></ac:task-body></ac:task>
+<ac:task><ac:task-id>2</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[The log shows ready]</em></ac:task-body></ac:task>
+<ac:task><ac:task-id>3</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[The dashboard lists the new instance]</em></ac:task-body></ac:task>
+</ac:task-list>
+<h2>Clean up</h2>
+<p><em>[How to undo everything, if this was a test.]</em></p>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">bash</ac:parameter><ac:plain-text-body><![CDATA[example destroy --name demo]]></ac:plain-text-body></ac:structured-macro>
+<h2>Next steps</h2>
+<ul><li><ac:link><ri:page ri:content-title="How-to Guide"/><ac:plain-text-link-body><![CDATA[How-to guides for common tasks]]></ac:plain-text-link-body></ac:link></li><li><ac:link><ri:page ri:content-title="Configuration Reference"/><ac:plain-text-link-body><![CDATA[Full configuration reference]]></ac:plain-text-link-body></ac:link></li><li><ac:link><ri:page ri:content-title="Troubleshooting Guide"/><ac:plain-text-link-body><![CDATA[Troubleshooting guide]]></ac:plain-text-link-body></ac:link></li></ul>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">On this page</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="toc"><ac:parameter ac:name="minLevel">2</ac:parameter><ac:parameter ac:name="maxLevel">2</ac:parameter><ac:parameter ac:name="style">none</ac:parameter><ac:parameter ac:name="indent">0px</ac:parameter></ac:structured-macro>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="details">
+<ac:rich-text-body>
+<table>
+<tbody>
+<tr><th>Document type</th><td>Getting Started</td></tr>
+<tr><th>Owner</th><td><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></td></tr>
+<tr><th>Status</th><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><th>Last reviewed</th><td><time datetime="2026-10-28"/></td></tr>
+<tr><th>Audience</th><td><em>[Who this is for]</em></td></tr>
+<tr><th>Time to complete</th><td><em>[20 minutes]</em></td></tr>
+<tr><th>Tested on</th><td><em>[Version and platform]</em></td></tr>
+</tbody>
+</table>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">About this template</ac:parameter>
+<ac:rich-text-body>
+<p>A tutorial is a guided path to one working result, with no decisions along the way. It must work exactly as written on a clean machine; test it that way before publishing. Explanations go in other pages, linked at the end. Delete this box when the page is done.</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+</ac:layout>

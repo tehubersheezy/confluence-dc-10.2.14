@@ -1,0 +1,127 @@
+<ac:layout>
+<ac:layout-section ac:type="single">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="excerpt"><ac:parameter ac:name="hidden">false</ac:parameter>
+<ac:rich-text-body>
+<p><strong><em>[One sentence: the problem and the proposed change.]</em></strong></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<p>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DESIGN DOCUMENT</ac:parameter><ac:parameter ac:name="subtle">true</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Blue</ac:parameter><ac:parameter ac:name="title">REVIEW BY NOV 15</ac:parameter></ac:structured-macro>
+</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="three_equal">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Problem</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#00A3BF</ac:parameter><ac:parameter ac:name="titleBGColor">#00A3BF</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p><em>[One line: what hurts today]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Proposal</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#00A3BF</ac:parameter><ac:parameter ac:name="titleBGColor">#00A3BF</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p><em>[One line: what we will build]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Decision needed by</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#00A3BF</ac:parameter><ac:parameter ac:name="titleBGColor">#00A3BF</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p><time datetime="2026-11-15"/></p>
+<p><em>[Who decides]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="two_right_sidebar">
+<ac:layout-cell>
+<h2>Problem</h2>
+<p><em>[What is wrong or missing today, who it affects, and what it costs. Evidence beats opinion: ticket counts, outage minutes, hours lost.]</em></p>
+<h2>Goals</h2>
+<ul><li><em>[Measurable outcome]</em></li><li><em>[Measurable outcome]</em></li></ul>
+<h2>Non-goals</h2>
+<ul><li><em>[Things a reader might expect this to cover that it deliberately does not]</em></li></ul>
+<h2>Proposed design</h2>
+<p><em>[Enough detail that a reviewer can find flaws. Start with a diagram, then walk through the main flows. Call out what changes for operators and for users.]</em></p>
+<ac:image ac:width="700"><ri:attachment ri:filename="design.png"/></ac:image>
+<h3>Components</h3>
+<p><em>[New or changed components and their responsibilities.]</em></p>
+<h3>Data model</h3>
+<p><em>[New tables, fields, schemas, or message formats.]</em></p>
+<h3>Interfaces</h3>
+<p><em>[APIs, CLI flags, config options, events. Include an example.]</em></p>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">yaml</ac:parameter><ac:parameter ac:name="title">Example</ac:parameter><ac:plain-text-body><![CDATA[# replace with a real example
+key: value]]></ac:plain-text-body></ac:structured-macro>
+<h3>Security and compliance</h3>
+<p><em>[Authentication, authorization, data classification, audit, retention. Name the reviewer if a security review is required.]</em></p>
+<h3>Operations</h3>
+<p><em>[Monitoring, alerting, backup, capacity, on-call impact. Which runbooks need to be written or changed.]</em></p>
+<h2>Alternatives considered</h2>
+<table>
+<tbody>
+<tr><th>Option</th><th>Summary</th><th>Why not</th></tr>
+<tr><td><em>[Option]</em></td><td><em>[What it would look like]</em></td><td><em>[Trade-off that ruled it out]</em></td></tr>
+<tr><td>Do nothing</td><td><em>[Current state continues]</em></td><td><em>[Cost of inaction]</em></td></tr>
+</tbody>
+</table>
+<h2>Risks and mitigations</h2>
+<table>
+<tbody>
+<tr><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Mitigation</th></tr>
+<tr><td><em>[Risk]</em></td><td><em>[Low / Medium / High]</em></td><td><em>[Low / Medium / High]</em></td><td><em>[How we reduce or detect it]</em></td></tr>
+</tbody>
+</table>
+<h2>Rollout plan</h2>
+<ol><li><em>[Phase 1: scope, environment, success criteria]</em></li><li><em>[Phase 2]</em></li><li><em>[Rollback trigger and procedure]</em></li></ol>
+<h2>Open questions</h2>
+<ac:task-list>
+<ac:task><ac:task-id>1</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[Question, who needs to answer it, and by when]</em></ac:task-body></ac:task>
+</ac:task-list>
+<h2>Review log</h2>
+<table>
+<tbody>
+<tr><th>Date</th><th>Reviewer</th><th>Outcome</th><th>Notes</th></tr>
+<tr><td><time datetime="2026-10-28"/></td><td><em>[Name]</em></td><td><em>[Approved / Changes requested]</em></td><td><em>[Summary]</em></td></tr>
+</tbody>
+</table>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">On this page</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="toc"><ac:parameter ac:name="minLevel">2</ac:parameter><ac:parameter ac:name="maxLevel">2</ac:parameter><ac:parameter ac:name="style">none</ac:parameter><ac:parameter ac:name="indent">0px</ac:parameter></ac:structured-macro>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="details">
+<ac:rich-text-body>
+<table>
+<tbody>
+<tr><th>Document type</th><td>Design Document</td></tr>
+<tr><th>Owner</th><td><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></td></tr>
+<tr><th>Status</th><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><th>Last reviewed</th><td><time datetime="2026-10-28"/></td></tr>
+<tr><th>Reviewers</th><td><em>[Names]</em></td></tr>
+<tr><th>Review by</th><td><time datetime="2026-11-15"/></td></tr>
+<tr><th>Target delivery</th><td><em>[Quarter or date]</em></td></tr>
+<tr><th>Ticket</th><td><em>[Epic or change request]</em></td></tr>
+</tbody>
+</table>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">About this template</ac:parameter>
+<ac:rich-text-body>
+<p>Write this before the work starts and circulate it for review. Reviewers comment inline; unresolved disagreements go in Open questions. Decisions that will outlive the project get their own ADR once approved. Delete this box when the page is done.</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+</ac:layout>

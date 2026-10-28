@@ -1,0 +1,147 @@
+<ac:layout>
+<ac:layout-section ac:type="single">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="excerpt"><ac:parameter ac:name="hidden">false</ac:parameter>
+<ac:rich-text-body>
+<p><strong><em>[One sentence: who is joining and which team.]</em></strong></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<p>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">ONBOARDING CHECKLIST</ac:parameter><ac:parameter ac:name="subtle">true</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Blue</ac:parameter><ac:parameter ac:name="title">WEEK 1</ac:parameter></ac:structured-macro>
+</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="three_equal">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Buddy</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#6554C0</ac:parameter><ac:parameter ac:name="titleBGColor">#6554C0</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p><em>[Name]</em></p>
+<p><em>[Chat handle]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Manager</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#6554C0</ac:parameter><ac:parameter ac:name="titleBGColor">#6554C0</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p><em>[Name]</em></p>
+<p><em>[First 1:1 date]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">First milestone</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#6554C0</ac:parameter><ac:parameter ac:name="titleBGColor">#6554C0</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p><em>[First change merged by end of week 1]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="two_right_sidebar">
+<ac:layout-cell>
+<h2>Welcome</h2>
+<p><em>[Two sentences on what the team does and how this checklist works. Your buddy and manager will go through it with you.]</em></p>
+<h2>Day 1</h2>
+<ac:task-list>
+<ac:task><ac:task-id>1</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[Laptop received and logged in]</em></ac:task-body></ac:task>
+<ac:task><ac:task-id>2</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[Email, chat, and calendar working]</em></ac:task-body></ac:task>
+<ac:task><ac:task-id>3</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[Meet your onboarding buddy]</em></ac:task-body></ac:task>
+<ac:task><ac:task-id>4</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[Read the team charter]</em></ac:task-body></ac:task>
+<ac:task><ac:task-id>5</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[Join the team channels]</em></ac:task-body></ac:task>
+</ac:task-list>
+<h2>Week 1</h2>
+<ac:task-list>
+<ac:task><ac:task-id>6</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[Accounts and access from the table below requested]</em></ac:task-body></ac:task>
+<ac:task><ac:task-id>7</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[Development environment set up (link Getting Started)]</em></ac:task-body></ac:task>
+<ac:task><ac:task-id>8</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[Shadow one on-call shift or support rotation]</em></ac:task-body></ac:task>
+<ac:task><ac:task-id>9</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[First small change merged]</em></ac:task-body></ac:task>
+<ac:task><ac:task-id>10</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[Meet each person in the key people table]</em></ac:task-body></ac:task>
+</ac:task-list>
+<h2>Month 1</h2>
+<ac:task-list>
+<ac:task><ac:task-id>11</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[Own one ticket end to end]</em></ac:task-body></ac:task>
+<ac:task><ac:task-id>12</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[Read the service overviews for the systems you will support]</em></ac:task-body></ac:task>
+<ac:task><ac:task-id>13</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[Attend a change advisory meeting]</em></ac:task-body></ac:task>
+<ac:task><ac:task-id>14</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><em>[30-day check-in with your manager]</em></ac:task-body></ac:task>
+</ac:task-list>
+<h2>Accounts and access</h2>
+<table>
+<tbody>
+<tr><th>System</th><th>Why you need it</th><th>How to request</th><th>Status</th></tr>
+<tr><td><em>[VPN]</em></td><td><em>[Reach internal systems]</em></td><td><em>[ServiceNow catalog item]</em></td><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Yellow</ac:parameter><ac:parameter ac:name="title">REQUESTED</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><td><em>[Source control]</em></td><td><em>[Code and infrastructure]</em></td><td><em>[Request group membership]</em></td><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">PENDING</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><td><em>[Ticketing]</em></td><td><em>[Work intake]</em></td><td><em>[Automatic with AD group]</em></td><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Green</ac:parameter><ac:parameter ac:name="title">DONE</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><td><em>[Monitoring]</em></td><td><em>[Dashboards and alerts]</em></td><td><em>[Ask your buddy]</em></td><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">PENDING</ac:parameter></ac:structured-macro>
+</td></tr>
+</tbody>
+</table>
+<h2>Tools</h2>
+<table>
+<tbody>
+<tr><th>Tool</th><th>Used for</th><th>Install</th></tr>
+<tr><td><em>[Tool]</em></td><td><em>[Purpose]</em></td><td><em>[Link or command]</em></td></tr>
+</tbody>
+</table>
+<h2>Key people</h2>
+<table>
+<tbody>
+<tr><th>Who</th><th>Role</th><th>Go to them for</th></tr>
+<tr><td><em>[Name]</em></td><td><em>[Manager]</em></td><td><em>[Priorities, time off, growth]</em></td></tr>
+<tr><td><em>[Name]</em></td><td><em>[Onboarding buddy]</em></td><td><em>[Anything, especially the questions you think are too small]</em></td></tr>
+<tr><td><em>[Name]</em></td><td><em>[Service owner]</em></td><td><em>[How the main system works]</em></td></tr>
+</tbody>
+</table>
+<h2>Reading list</h2>
+<ol><li><ac:link><ri:page ri:content-title="Service Overview"/><ac:plain-text-link-body><![CDATA[Service overviews for the systems you will support]]></ac:plain-text-link-body></ac:link></li><li><ac:link><ri:page ri:content-title="Runbook"/><ac:plain-text-link-body><![CDATA[Runbooks you will be expected to run]]></ac:plain-text-link-body></ac:link></li><li><ac:link><ri:page ri:content-title="Standard Operating Procedure"/><ac:plain-text-link-body><![CDATA[SOPs that apply to the team]]></ac:plain-text-link-body></ac:link></li><li><ac:link><ri:page ri:content-title="Architecture Overview"/><ac:plain-text-link-body><![CDATA[Architecture overview]]></ac:plain-text-link-body></ac:link></li></ol>
+<h2>Recurring meetings</h2>
+<table>
+<tbody>
+<tr><th>Meeting</th><th>When</th><th>Purpose</th></tr>
+<tr><td><em>[Team standup]</em></td><td><em>[Daily 9:30 ET]</em></td><td><em>[Blockers and plans]</em></td></tr>
+</tbody>
+</table>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">On this page</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="toc"><ac:parameter ac:name="minLevel">2</ac:parameter><ac:parameter ac:name="maxLevel">2</ac:parameter><ac:parameter ac:name="style">none</ac:parameter><ac:parameter ac:name="indent">0px</ac:parameter></ac:structured-macro>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="details">
+<ac:rich-text-body>
+<table>
+<tbody>
+<tr><th>Document type</th><td>Onboarding Checklist</td></tr>
+<tr><th>Owner</th><td><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></td></tr>
+<tr><th>Status</th><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><th>Last reviewed</th><td><time datetime="2026-10-28"/></td></tr>
+<tr><th>New team member</th><td><em>[Name]</em></td></tr>
+<tr><th>Start date</th><td><time datetime="2026-11-03"/></td></tr>
+<tr><th>Buddy</th><td><em>[Name]</em></td></tr>
+<tr><th>Manager</th><td><em>[Name]</em></td></tr>
+</tbody>
+</table>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">About this template</ac:parameter>
+<ac:rich-text-body>
+<p>Copy this page for each new team member and title it with their name. They own the checklist; the buddy reviews it weekly. Prune anything that is not actually needed in the first month. Delete this box when the page is done.</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+</ac:layout>

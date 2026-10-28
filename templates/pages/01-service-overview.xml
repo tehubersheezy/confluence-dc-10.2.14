@@ -1,0 +1,129 @@
+<ac:layout>
+<ac:layout-section ac:type="single">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="excerpt"><ac:parameter ac:name="hidden">false</ac:parameter>
+<ac:rich-text-body>
+<p><strong><em>[One sentence: what this service does and who depends on it.]</em></strong></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<p>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">SERVICE OVERVIEW</ac:parameter><ac:parameter ac:name="subtle">true</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Red</ac:parameter><ac:parameter ac:name="title">TIER 1</ac:parameter></ac:structured-macro>
+</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="three_equal">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Owner</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#00875A</ac:parameter><ac:parameter ac:name="titleBGColor">#00875A</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></p>
+<p><em>[Team]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">On-call</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#00875A</ac:parameter><ac:parameter ac:name="titleBGColor">#00875A</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p><em>[Rotation name]</em></p>
+<p><em>[Support channel]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Tier</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#00875A</ac:parameter><ac:parameter ac:name="titleBGColor">#00875A</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Red</ac:parameter><ac:parameter ac:name="title">TIER 1</ac:parameter></ac:structured-macro>
+</p>
+<p><em>[Why it has this tier]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="two_right_sidebar">
+<ac:layout-cell>
+<h2>What it does</h2>
+<p><em>[Two or three sentences. What problem it solves, and what it is not responsible for.]</em></p>
+<h2>Who uses it</h2>
+<ul><li><em>[Consumer or team]</em> for <em>[purpose]</em></li><li><em>[Consumer or team]</em> for <em>[purpose]</em></li></ul>
+<h2>Quick links</h2>
+<table>
+<tbody>
+<tr><th>Source</th><td><a href="https://example.com/repo"><em>[Repository]</em></a></td></tr>
+<tr><th>Dashboards</th><td><a href="https://example.com/dashboard"><em>[Health dashboard]</em></a></td></tr>
+<tr><th>Alerts</th><td><a href="https://example.com/alerts"><em>[Alert rules]</em></a></td></tr>
+<tr><th>Runbooks</th><td><ac:link><ri:page ri:content-title="Runbook"/></ac:link></td></tr>
+<tr><th>Architecture</th><td><ac:link><ri:page ri:content-title="Architecture Overview"/></ac:link></td></tr>
+<tr><th>Tickets</th><td><em>[Jira project or ServiceNow assignment group]</em></td></tr>
+</tbody>
+</table>
+<h2>Architecture at a glance</h2>
+<p><em>[One diagram. Attach it to this page, or link to the Architecture Overview.]</em></p>
+<ac:image ac:width="700"><ri:attachment ri:filename="architecture.png"/></ac:image>
+<h2>Dependencies</h2>
+<table>
+<tbody>
+<tr><th>Direction</th><th>System</th><th>Purpose</th><th>Failure impact</th></tr>
+<tr><td>Upstream</td><td><em>[System]</em></td><td><em>[What we get from it]</em></td><td><em>[What breaks if it is down]</em></td></tr>
+<tr><td>Downstream</td><td><em>[System]</em></td><td><em>[What it gets from us]</em></td><td><em>[What breaks for them]</em></td></tr>
+</tbody>
+</table>
+<h2>Environments</h2>
+<table>
+<tbody>
+<tr><th>Environment</th><th>URL</th><th>Hosts</th><th>Notes</th></tr>
+<tr><td>Production</td><td><em>[URL]</em></td><td><em>[Hostnames or cluster]</em></td><td><em>[Change window, approvals]</em></td></tr>
+<tr><td>Staging</td><td><em>[URL]</em></td><td><em>[Hostnames or cluster]</em></td><td><em>[Refresh cadence]</em></td></tr>
+<tr><td>Development</td><td><em>[URL]</em></td><td><em>[Hostnames or cluster]</em></td><td></td></tr>
+</tbody>
+</table>
+<h2>Service levels</h2>
+<table>
+<tbody>
+<tr><th>Objective</th><th>Target</th><th>Measured by</th></tr>
+<tr><td>Availability</td><td><em>[99.9%]</em></td><td><em>[Dashboard or alert]</em></td></tr>
+<tr><td>Latency</td><td><em>[p95 under 300 ms]</em></td><td><em>[Dashboard or alert]</em></td></tr>
+<tr><td>Support response</td><td><em>[Within 1 business hour]</em></td><td><em>[Ticket queue report]</em></td></tr>
+</tbody>
+</table>
+<h2>Related pages</h2>
+<ac:structured-macro ac:name="children"><ac:parameter ac:name="all">true</ac:parameter></ac:structured-macro>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">On this page</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="toc"><ac:parameter ac:name="minLevel">2</ac:parameter><ac:parameter ac:name="maxLevel">2</ac:parameter><ac:parameter ac:name="style">none</ac:parameter><ac:parameter ac:name="indent">0px</ac:parameter></ac:structured-macro>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="details">
+<ac:rich-text-body>
+<table>
+<tbody>
+<tr><th>Document type</th><td>Service Overview</td></tr>
+<tr><th>Owner</th><td><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></td></tr>
+<tr><th>Status</th><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><th>Last reviewed</th><td><time datetime="2026-10-28"/></td></tr>
+<tr><th>Team</th><td><em>[Owning team]</em></td></tr>
+<tr><th>Tier</th><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Red</ac:parameter><ac:parameter ac:name="title">TIER 1</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><th>Support channel</th><td><em>[#channel or queue]</em></td></tr>
+</tbody>
+</table>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">About this template</ac:parameter>
+<ac:rich-text-body>
+<p>The front door for a service. Keep it to one screen and link out to runbooks, dashboards, and design docs rather than copying them here. Delete this box when the page is done.</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+</ac:layout>

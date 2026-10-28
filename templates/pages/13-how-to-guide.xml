@@ -1,0 +1,80 @@
+<ac:layout>
+<ac:layout-section ac:type="single">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="excerpt"><ac:parameter ac:name="hidden">false</ac:parameter>
+<ac:rich-text-body>
+<p><strong><em>[One sentence: the task this page shows how to do.]</em></strong></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<p>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">HOW-TO GUIDE</ac:parameter><ac:parameter ac:name="subtle">true</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="two_right_sidebar">
+<ac:layout-cell>
+<h2>Goal</h2>
+<p><em>[The task, in one sentence, and when you would need to do it.]</em></p>
+<h2>Before you begin</h2>
+<ul><li><em>[Access or role required]</em></li><li><em>[Tools and versions]</em></li><li><em>[Related runbook, if this touches production]</em></li></ul>
+<h2>Steps</h2>
+<h3>1. <em>[First action]</em></h3>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">bash</ac:parameter><ac:plain-text-body><![CDATA[example do-thing --flag value]]></ac:plain-text-body></ac:structured-macro>
+<h3>2. <em>[Second action]</em></h3>
+<p><em>[Describe UI steps as: open X, select Y, click Z.]</em></p>
+<h3>3. <em>[Third action]</em></h3>
+<p><em>[Step.]</em></p>
+<h2>Verify</h2>
+<p><em>[What proves the task is done.]</em></p>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">bash</ac:parameter><ac:plain-text-body><![CDATA[example status]]></ac:plain-text-body></ac:structured-macro>
+<h2>Variations</h2>
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">[Doing this for a different environment or case]</ac:parameter>
+<ac:rich-text-body>
+<p><em>[What changes in the steps above.]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<h2>Troubleshooting</h2>
+<table>
+<tbody>
+<tr><th>Problem</th><th>Cause</th><th>Fix</th></tr>
+<tr><td><em>[Error text]</em></td><td><em>[Why it happens]</em></td><td><em>[What to do]</em></td></tr>
+</tbody>
+</table>
+<h2>Related</h2>
+<ul><li><ac:link><ri:page ri:content-title="Getting Started"/></ac:link></li><li><ac:link><ri:page ri:content-title="Configuration Reference"/></ac:link></li><li><ac:link><ri:page ri:content-title="Runbook"/></ac:link></li></ul>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">On this page</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="toc"><ac:parameter ac:name="minLevel">2</ac:parameter><ac:parameter ac:name="maxLevel">2</ac:parameter><ac:parameter ac:name="style">none</ac:parameter><ac:parameter ac:name="indent">0px</ac:parameter></ac:structured-macro>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="details">
+<ac:rich-text-body>
+<table>
+<tbody>
+<tr><th>Document type</th><td>How-to Guide</td></tr>
+<tr><th>Owner</th><td><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></td></tr>
+<tr><th>Status</th><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><th>Last reviewed</th><td><time datetime="2026-10-28"/></td></tr>
+<tr><th>Audience</th><td><em>[Who this is for]</em></td></tr>
+<tr><th>Applies to</th><td><em>[Product and version]</em></td></tr>
+</tbody>
+</table>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">About this template</ac:parameter>
+<ac:rich-text-body>
+<p>A how-to is a recipe for someone who already knows the basics. Title it with the task: <strong>Rotate the database password</strong>. Keep background out; link to it. Steps are numbered, verifiable, and short. Delete this box when the page is done.</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+</ac:layout>

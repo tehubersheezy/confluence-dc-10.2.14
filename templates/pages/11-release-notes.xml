@@ -1,0 +1,115 @@
+<ac:layout>
+<ac:layout-section ac:type="single">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="excerpt"><ac:parameter ac:name="hidden">false</ac:parameter>
+<ac:rich-text-body>
+<p><strong><em>[One sentence: the headline of this release.]</em></strong></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<p>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">RELEASE NOTES</ac:parameter><ac:parameter ac:name="subtle">true</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Blue</ac:parameter><ac:parameter ac:name="title">MINOR</ac:parameter></ac:structured-macro>
+</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="three_equal">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Version</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#00875A</ac:parameter><ac:parameter ac:name="titleBGColor">#00875A</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p><strong><em>[2.4.0]</em></strong></p>
+<p>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Blue</ac:parameter><ac:parameter ac:name="title">MINOR</ac:parameter></ac:structured-macro>
+</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Release date</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#00875A</ac:parameter><ac:parameter ac:name="titleBGColor">#00875A</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p><strong><time datetime="2026-11-05"/></strong></p>
+<p><em>[Change ticket]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Headline</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#00875A</ac:parameter><ac:parameter ac:name="titleBGColor">#00875A</ac:parameter><ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+<ac:rich-text-body>
+<p><em>[The one change most people care about]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="two_right_sidebar">
+<ac:layout-cell>
+<h2>Highlights</h2>
+<ul><li><em>[The one to three changes most people care about]</em></li></ul>
+<ac:structured-macro ac:name="warning"><ac:parameter ac:name="title">Action required</ac:parameter>
+<ac:rich-text-body>
+<p><em>[Anything operators or users must do before or after upgrading. Delete this box if there is nothing.]</em></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<h2>Added</h2>
+<ul><li><em>[New capability, with a link to its documentation]</em></li></ul>
+<h2>Changed</h2>
+<ul><li><em>[Changed behavior. Say what it was before and what it is now.]</em></li></ul>
+<h2>Deprecated</h2>
+<ul><li><em>[Still works but will be removed; give the removal version and the replacement]</em></li></ul>
+<h2>Removed</h2>
+<ul><li><em>[Feature or option that no longer exists]</em></li></ul>
+<h2>Fixed</h2>
+<ul><li><em>[Bug fixed, described by symptom]</em></li></ul>
+<h2>Security</h2>
+<ul><li><em>[Vulnerability addressed, with CVE if public]</em></li></ul>
+<h2>Upgrade notes</h2>
+<ol><li><em>[Prerequisite, for example: requires database schema version 12]</em></li><li><em>[Step or link to the upgrade runbook]</em></li><li><em>[Rollback: how far back is supported]</em></li></ol>
+<h2>Known issues</h2>
+<table>
+<tbody>
+<tr><th>Issue</th><th>Workaround</th><th>Tracking</th></tr>
+<tr><td><em>[Description]</em></td><td><em>[Workaround]</em></td><td><em>[Ticket]</em></td></tr>
+</tbody>
+</table>
+<h2>Issues in this release</h2>
+<p><em>[Narrow the query to this release, for example: fixVersion = 2.4.0]</em></p>
+<ac:structured-macro ac:name="jira"><ac:parameter ac:name="serverId">{{JIRA_APPLINK_ID}}</ac:parameter><ac:parameter ac:name="jqlQuery">project = ASDF ORDER BY key</ac:parameter><ac:parameter ac:name="columns">key,summary,type,status</ac:parameter><ac:parameter ac:name="maximumIssues">50</ac:parameter></ac:structured-macro>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">On this page</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="toc"><ac:parameter ac:name="minLevel">2</ac:parameter><ac:parameter ac:name="maxLevel">2</ac:parameter><ac:parameter ac:name="style">none</ac:parameter><ac:parameter ac:name="indent">0px</ac:parameter></ac:structured-macro>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="details">
+<ac:rich-text-body>
+<table>
+<tbody>
+<tr><th>Document type</th><td>Release Notes</td></tr>
+<tr><th>Owner</th><td><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></td></tr>
+<tr><th>Status</th><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><th>Last reviewed</th><td><time datetime="2026-10-28"/></td></tr>
+<tr><th>Product</th><td><em>[Name]</em></td></tr>
+<tr><th>Version</th><td><em>[2.4.0]</em></td></tr>
+<tr><th>Release date</th><td><time datetime="2026-11-05"/></td></tr>
+<tr><th>Release type</th><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Blue</ac:parameter><ac:parameter ac:name="title">MINOR</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><th>Change ticket</th><td><em>[CHG number]</em></td></tr>
+</tbody>
+</table>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">About this template</ac:parameter>
+<ac:rich-text-body>
+<p>Title the page <strong>[Product] [version] release notes</strong>. Write for the people who run and use the system, not the people who built it. Keep every category heading even when it is empty, and write None. Delete this box when the page is done.</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+</ac:layout>

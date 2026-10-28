@@ -1,0 +1,123 @@
+<ac:layout>
+<ac:layout-section ac:type="single">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="excerpt"><ac:parameter ac:name="hidden">false</ac:parameter>
+<ac:rich-text-body>
+<p><strong><em>[One sentence: the API this page documents and its current version.]</em></strong></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<p>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">API REFERENCE</ac:parameter><ac:parameter ac:name="subtle">true</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Blue</ac:parameter><ac:parameter ac:name="title">V1</ac:parameter></ac:structured-macro>
+</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="two_right_sidebar">
+<ac:layout-cell>
+<h2>Authentication</h2>
+<p><em>[Token type, how to obtain one, where it goes in the request, and how long it lasts.]</em></p>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">bash</ac:parameter><ac:plain-text-body><![CDATA[curl -H "Authorization: Bearer $TOKEN" https://api.example.internal/v1/health]]></ac:plain-text-body></ac:structured-macro>
+<h2>Conventions</h2>
+<table>
+<tbody>
+<tr><th>Content type</th><td><em>[application/json for requests and responses]</em></td></tr>
+<tr><th>Versioning</th><td><em>[Version in the path; breaking changes get a new version; old versions supported for 12 months]</em></td></tr>
+<tr><th>Pagination</th><td><em>[limit and start query parameters; response includes a next link]</em></td></tr>
+<tr><th>Rate limits</th><td><em>[600 requests per minute per token; 429 with Retry-After when exceeded]</em></td></tr>
+<tr><th>Timestamps</th><td><em>[ISO 8601 in UTC]</em></td></tr>
+<tr><th>Idempotency</th><td><em>[PUT and DELETE are idempotent; POST accepts an Idempotency-Key header]</em></td></tr>
+</tbody>
+</table>
+<h2>Endpoints</h2>
+<h3><em>[GET /items]</em></h3>
+<p><em>[What it returns and when to use it.]</em></p>
+<table>
+<tbody>
+<tr><th>Parameter</th><th>In</th><th>Type</th><th>Required</th><th>Description</th></tr>
+<tr><td><em>[status]</em></td><td>query</td><td>string</td><td>No</td><td><em>[Filter by status: active, archived]</em></td></tr>
+<tr><td><em>[limit]</em></td><td>query</td><td>integer</td><td>No</td><td><em>[Page size, default 50, max 200]</em></td></tr>
+</tbody>
+</table>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">bash</ac:parameter><ac:parameter ac:name="title">Request</ac:parameter><ac:plain-text-body><![CDATA[curl -H "Authorization: Bearer $TOKEN" "https://api.example.internal/v1/items?status=active&limit=2"]]></ac:plain-text-body></ac:structured-macro>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">json</ac:parameter><ac:parameter ac:name="title">Response 200</ac:parameter><ac:plain-text-body><![CDATA[{
+  "results": [
+    {"id": "itm_01", "name": "Example", "status": "active"}
+  ],
+  "next": "/v1/items?status=active&limit=2&start=2"
+}]]></ac:plain-text-body></ac:structured-macro>
+<table>
+<tbody>
+<tr><th>Status</th><th>Meaning</th></tr>
+<tr><td>200</td><td>Success</td></tr>
+<tr><td>401</td><td>Missing or expired token</td></tr>
+<tr><td>403</td><td>Token lacks the required scope</td></tr>
+</tbody>
+</table>
+<h3><em>[POST /items]</em></h3>
+<p><em>[What it creates. Note any side effects.]</em></p>
+<table>
+<tbody>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr>
+<tr><td><em>[name]</em></td><td>string</td><td>Yes</td><td><em>[Display name, 1 to 100 characters]</em></td></tr>
+<tr><td><em>[status]</em></td><td>string</td><td>No</td><td><em>[Defaults to active]</em></td></tr>
+</tbody>
+</table>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">bash</ac:parameter><ac:parameter ac:name="title">Request</ac:parameter><ac:plain-text-body><![CDATA[curl -X POST -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
+  -d '{"name": "Example"}' https://api.example.internal/v1/items]]></ac:plain-text-body></ac:structured-macro>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">json</ac:parameter><ac:parameter ac:name="title">Response 201</ac:parameter><ac:plain-text-body><![CDATA[{"id": "itm_02", "name": "Example", "status": "active"}]]></ac:plain-text-body></ac:structured-macro>
+<h2>Errors</h2>
+<p>All errors use the same body.</p>
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">json</ac:parameter><ac:plain-text-body><![CDATA[{"error": {"code": "validation_failed", "message": "name is required", "details": []}}]]></ac:plain-text-body></ac:structured-macro>
+<table>
+<tbody>
+<tr><th>Code</th><th>HTTP status</th><th>Meaning</th><th>What to do</th></tr>
+<tr><td><em>[validation_failed]</em></td><td>400</td><td><em>[Request body failed validation]</em></td><td><em>[Check details for the field]</em></td></tr>
+<tr><td><em>[not_found]</em></td><td>404</td><td><em>[No resource with that ID]</em></td><td></td></tr>
+<tr><td><em>[rate_limited]</em></td><td>429</td><td><em>[Too many requests]</em></td><td><em>[Wait for Retry-After seconds]</em></td></tr>
+</tbody>
+</table>
+<h2>Changelog</h2>
+<table>
+<tbody>
+<tr><th>Date</th><th>Version</th><th>Change</th></tr>
+<tr><td><time datetime="2026-10-28"/></td><td><em>[v1]</em></td><td><em>[Initial release]</em></td></tr>
+</tbody>
+</table>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">On this page</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="toc"><ac:parameter ac:name="minLevel">2</ac:parameter><ac:parameter ac:name="maxLevel">2</ac:parameter><ac:parameter ac:name="style">none</ac:parameter><ac:parameter ac:name="indent">0px</ac:parameter></ac:structured-macro>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="details">
+<ac:rich-text-body>
+<table>
+<tbody>
+<tr><th>Document type</th><td>API Reference</td></tr>
+<tr><th>Owner</th><td><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></td></tr>
+<tr><th>Status</th><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><th>Last reviewed</th><td><time datetime="2026-10-28"/></td></tr>
+<tr><th>API version</th><td><em>[v1]</em></td></tr>
+<tr><th>Base URL</th><td><em>[https://api.example.internal/v1]</em></td></tr>
+<tr><th>Spec</th><td><em>[Link to OpenAPI document]</em></td></tr>
+<tr><th>Support</th><td><em>[Channel or queue]</em></td></tr>
+</tbody>
+</table>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">About this template</ac:parameter>
+<ac:rich-text-body>
+<p>If the API has an OpenAPI spec, link it in the properties and keep this page to authentication, conventions, and worked examples. Document endpoints by hand only when there is no generated reference. Every endpoint gets one real request and one real response. Delete this box when the page is done.</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+</ac:layout>

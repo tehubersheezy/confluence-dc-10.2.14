@@ -1,0 +1,121 @@
+<ac:layout>
+<ac:layout-section ac:type="single">
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="excerpt"><ac:parameter ac:name="hidden">false</ac:parameter>
+<ac:rich-text-body>
+<p><strong><em>[One sentence: the system this describes and the boundary it covers.]</em></strong></p>
+</ac:rich-text-body>
+</ac:structured-macro>
+<p>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">ARCHITECTURE OVERVIEW</ac:parameter><ac:parameter ac:name="subtle">true</ac:parameter></ac:structured-macro>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+<ac:layout-section ac:type="two_right_sidebar">
+<ac:layout-cell>
+<h2>Purpose and scope</h2>
+<p><em>[What the system is for and what this document covers. Name what is out of scope.]</em></p>
+<h2>Quality goals</h2>
+<table>
+<tbody>
+<tr><th>Priority</th><th>Goal</th><th>How it shapes the design</th></tr>
+<tr><td>1</td><td><em>[Availability]</em></td><td><em>[Active-active across two sites]</em></td></tr>
+<tr><td>2</td><td><em>[Auditability]</em></td><td><em>[Append-only event log]</em></td></tr>
+<tr><td>3</td><td><em>[Cost]</em></td><td><em>[Shared database tier]</em></td></tr>
+</tbody>
+</table>
+<h2>System context</h2>
+<p><em>[Diagram: the system as one box, the people who use it, and the external systems it talks to.]</em></p>
+<ac:image ac:width="700"><ri:attachment ri:filename="context.png"/></ac:image>
+<table>
+<tbody>
+<tr><th>Actor or system</th><th>Role</th><th>Interaction</th></tr>
+<tr><td><em>[End user]</em></td><td><em>[Who they are]</em></td><td><em>[What they do through the system]</em></td></tr>
+<tr><td><em>[Identity provider]</em></td><td>External system</td><td><em>[SAML login]</em></td></tr>
+</tbody>
+</table>
+<h2>Containers</h2>
+<p><em>[Diagram: the deployable units. One box per thing that runs as its own process.]</em></p>
+<ac:image ac:width="700"><ri:attachment ri:filename="containers.png"/></ac:image>
+<table>
+<tbody>
+<tr><th>Container</th><th>Technology</th><th>Responsibility</th><th>Runs on</th></tr>
+<tr><td><em>[Web app]</em></td><td><em>[Java 21, Spring]</em></td><td><em>[Serves UI and API]</em></td><td><em>[k8s cluster prod-east]</em></td></tr>
+<tr><td><em>[Database]</em></td><td><em>[PostgreSQL 16]</em></td><td><em>[System of record]</em></td><td><em>[RDS, Multi-AZ]</em></td></tr>
+<tr><td><em>[Queue]</em></td><td><em>[RabbitMQ]</em></td><td><em>[Async jobs]</em></td><td><em>[VM pair]</em></td></tr>
+</tbody>
+</table>
+<h2>Components</h2>
+<p><em>[Optional. Only for containers whose internals matter to other teams.]</em></p>
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">[Container name] components</ac:parameter>
+<ac:rich-text-body>
+<table>
+<tbody>
+<tr><th>Component</th><th>Responsibility</th><th>Depends on</th></tr>
+<tr><td><em>[Auth module]</em></td><td><em>[Token validation]</em></td><td><em>[Identity provider]</em></td></tr>
+</tbody>
+</table>
+</ac:rich-text-body>
+</ac:structured-macro>
+<h2>Key data flows</h2>
+<p><em>[The two or three flows that explain how the system works.]</em></p>
+<h3><em>[Flow name, for example: user submits a request]</em></h3>
+<ol><li><em>[Step]</em></li><li><em>[Step]</em></li><li><em>[Step]</em></li></ol>
+<h2>Cross-cutting concerns</h2>
+<table>
+<tbody>
+<tr><th>Authentication and authorization</th><td><em>[SSO via SAML, roles from AD groups]</em></td></tr>
+<tr><th>Secrets</th><td><em>[Vault, rotated every 90 days]</em></td></tr>
+<tr><th>Logging and monitoring</th><td><em>[Logs to Splunk, metrics to Prometheus, dashboard link]</em></td></tr>
+<tr><th>Backup and recovery</th><td><em>[Nightly snapshots, RPO 24 h, RTO 4 h]</em></td></tr>
+<tr><th>Network and security zones</th><td><em>[DMZ for web tier, internal for data tier]</em></td></tr>
+</tbody>
+</table>
+<h2>Environments and deployment</h2>
+<p><em>[How code gets to production, how environments differ, where infrastructure is defined.]</em></p>
+<h2>Decisions</h2>
+<p>Significant decisions are recorded as ADRs and listed here automatically.</p>
+<ac:structured-macro ac:name="detailssummary"><ac:parameter ac:name="cql">label = "adr" and space = currentSpace()</ac:parameter><ac:parameter ac:name="headings">Status,Decision date,Owner</ac:parameter><ac:parameter ac:name="firstcolumn">Decision</ac:parameter></ac:structured-macro>
+<h2>Risks and technical debt</h2>
+<table>
+<tbody>
+<tr><th>Risk</th><th>Impact</th><th>Mitigation or plan</th></tr>
+<tr><td><em>[Single queue node]</em></td><td><em>[Outage on failure]</em></td><td><em>[Cluster in Q1, see ADR-7]</em></td></tr>
+</tbody>
+</table>
+</ac:layout-cell>
+<ac:layout-cell>
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">On this page</ac:parameter><ac:parameter ac:name="borderStyle">solid</ac:parameter><ac:parameter ac:name="borderColor">#DFE1E6</ac:parameter>
+<ac:rich-text-body>
+<ac:structured-macro ac:name="toc"><ac:parameter ac:name="minLevel">2</ac:parameter><ac:parameter ac:name="maxLevel">2</ac:parameter><ac:parameter ac:name="style">none</ac:parameter><ac:parameter ac:name="indent">0px</ac:parameter></ac:structured-macro>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="details">
+<ac:rich-text-body>
+<table>
+<tbody>
+<tr><th>Document type</th><td>Architecture Overview</td></tr>
+<tr><th>Owner</th><td><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></td></tr>
+<tr><th>Status</th><td>
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">DRAFT</ac:parameter></ac:structured-macro>
+</td></tr>
+<tr><th>Last reviewed</th><td><time datetime="2026-10-28"/></td></tr>
+<tr><th>System</th><td><em>[System name]</em></td></tr>
+<tr><th>Architect</th><td><em>[Name]</em></td></tr>
+</tbody>
+</table>
+</ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">About this template</ac:parameter>
+<ac:rich-text-body>
+<p>Follows the C4 model: context, containers, components. Stop at the level that is useful; most systems need the first two plus data flows. Record decisions as ADRs and link them rather than explaining them inline. Delete this box when the page is done.</p>
+</ac:rich-text-body>
+</ac:structured-macro>
+</ac:layout-cell>
+</ac:layout-section>
+</ac:layout>
