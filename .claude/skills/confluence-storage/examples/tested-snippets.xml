@@ -1,0 +1,338 @@
+<!-- Snippets that rendered correctly on Confluence DC 10.2.14. Replace {{USER_KEY}}, {{JIRA_APPLINK_ID}}, {{PAGE_ID}}; TEST/TEST2 are example space keys.
+     att-* snippets assume the named files are attached to the same page. -->
+
+<!-- plain-xhtml -->
+<h2>Heading</h2><p><strong>b</strong> <em>i</em> <u>u</u> <s>s</s> <code>c</code> x<sub>2</sub> &amp; done</p><ul><li>one</li></ul><table><tbody><tr><th>H</th></tr><tr><td>D</td></tr></tbody></table><blockquote><p>q</p></blockquote><hr/>
+
+<!-- link-page -->
+<p><ac:link><ri:page ri:space-key="TEST" ri:content-title="Install Guide"/><ac:plain-text-link-body><![CDATA[install guide]]></ac:plain-text-link-body></ac:link></p>
+
+<!-- link-anchor -->
+<p><ac:link ac:anchor="setup"><ac:plain-text-link-body><![CDATA[Setup]]></ac:plain-text-link-body></ac:link></p>
+
+<!-- link-attachment -->
+<p><ac:link><ri:attachment ri:filename="spec.pdf"/></ac:link></p>
+
+<!-- mention -->
+<p><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></p>
+
+<!-- image-url -->
+<p><ac:image><ri:url ri:value="https://example.com/logo.png"/></ac:image></p>
+
+<!-- info -->
+<ac:structured-macro ac:name="info"><ac:parameter ac:name="title">Heads up</ac:parameter><ac:rich-text-body><p>Maintenance window is Saturday.</p></ac:rich-text-body></ac:structured-macro>
+
+<!-- note -->
+<ac:structured-macro ac:name="note"><ac:parameter ac:name="icon">false</ac:parameter><ac:rich-text-body><p>n</p></ac:rich-text-body></ac:structured-macro>
+
+<!-- tip -->
+<ac:structured-macro ac:name="tip"><ac:rich-text-body><p>t</p></ac:rich-text-body></ac:structured-macro>
+
+<!-- warning -->
+<ac:structured-macro ac:name="warning"><ac:parameter ac:name="title">W</ac:parameter><ac:rich-text-body><p>w</p></ac:rich-text-body></ac:structured-macro>
+
+<!-- panel -->
+<ac:structured-macro ac:name="panel"><ac:parameter ac:name="title">Summary</ac:parameter><ac:parameter ac:name="bgColor">#F4F5F7</ac:parameter><ac:parameter ac:name="borderStyle">dashed</ac:parameter><ac:rich-text-body><p>panel body</p></ac:rich-text-body></ac:structured-macro>
+
+<!-- expand -->
+<ac:structured-macro ac:name="expand"><ac:parameter ac:name="title">Details</ac:parameter><ac:rich-text-body><p>hidden</p></ac:rich-text-body></ac:structured-macro>
+
+<!-- code -->
+<ac:structured-macro ac:name="code"><ac:parameter ac:name="language">python</ac:parameter><ac:parameter ac:name="linenumbers">true</ac:parameter><ac:parameter ac:name="title">Example</ac:parameter><ac:plain-text-body><![CDATA[print("hi")  # ]]]]><![CDATA[> literal]]></ac:plain-text-body></ac:structured-macro>
+
+<!-- noformat -->
+<ac:structured-macro ac:name="noformat"><ac:parameter ac:name="nopanel">true</ac:parameter><ac:plain-text-body><![CDATA[raw text]]></ac:plain-text-body></ac:structured-macro>
+
+<!-- status -->
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Green</ac:parameter><ac:parameter ac:name="title">DONE</ac:parameter></ac:structured-macro>
+
+<!-- status-subtle -->
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Red</ac:parameter><ac:parameter ac:name="title">BLOCKED</ac:parameter><ac:parameter ac:name="subtle">true</ac:parameter></ac:structured-macro>
+
+<!-- toc -->
+<h1>H1</h1><h2>H2</h2><h3>H3</h3><h4>H4</h4><ac:structured-macro ac:name="toc"><ac:parameter ac:name="maxLevel">3</ac:parameter></ac:structured-macro>
+
+<!-- anchor -->
+<ac:structured-macro ac:name="anchor"><ac:parameter ac:name="">setup</ac:parameter></ac:structured-macro>
+
+<!-- children -->
+<ac:structured-macro ac:name="children"><ac:parameter ac:name="all">true</ac:parameter><ac:parameter ac:name="page"><ac:link><ri:page ri:content-title="Storage Test Root"/></ac:link></ac:parameter></ac:structured-macro>
+
+<!-- excerpt -->
+<ac:structured-macro ac:name="excerpt"><ac:rich-text-body><p>One-line summary reused elsewhere.</p></ac:rich-text-body></ac:structured-macro>
+
+<!-- include -->
+<ac:structured-macro ac:name="include"><ac:parameter ac:name=""><ac:link><ri:page ri:content-title="Shared Footer"/></ac:link></ac:parameter></ac:structured-macro>
+
+<!-- excerpt-include -->
+<ac:structured-macro ac:name="excerpt-include"><ac:parameter ac:name=""><ac:link><ri:page ri:content-title="Shared Footer"/></ac:link></ac:parameter><ac:parameter ac:name="nopanel">true</ac:parameter></ac:structured-macro>
+
+<!-- details -->
+<ac:structured-macro ac:name="details"><ac:rich-text-body><table><tbody><tr><th>Owner</th><td><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></td></tr><tr><th>Status</th><td>Draft</td></tr></tbody></table></ac:rich-text-body></ac:structured-macro>
+
+<!-- detailssummary -->
+<ac:structured-macro ac:name="detailssummary"><ac:parameter ac:name="label">project-doc</ac:parameter></ac:structured-macro>
+
+<!-- emoticon -->
+<p><ac:emoticon ac:name="tick"/><ac:emoticon ac:name="warning"/></p>
+
+<!-- layout -->
+<ac:layout><ac:layout-section ac:type="two_equal"><ac:layout-cell><p>Left</p></ac:layout-cell><ac:layout-cell><p>Right</p></ac:layout-cell></ac:layout-section></ac:layout>
+
+<!-- toc-zone -->
+<ac:structured-macro ac:name="toc-zone"><ac:parameter ac:name="location">top</ac:parameter><ac:rich-text-body><h2>Z1</h2><h2>Z2</h2></ac:rich-text-body></ac:structured-macro>
+
+<!-- pagetree -->
+<ac:structured-macro ac:name="pagetree"><ac:parameter ac:name="root"><ac:link><ri:page ri:content-title="Storage Test Root"/></ac:link></ac:parameter><ac:parameter ac:name="searchBox">true</ac:parameter></ac:structured-macro>
+
+<!-- contentbylabel -->
+<ac:structured-macro ac:name="contentbylabel"><ac:parameter ac:name="labels">project-doc</ac:parameter><ac:parameter ac:name="showLabels">false</ac:parameter></ac:structured-macro>
+
+<!-- blog-posts -->
+<ac:structured-macro ac:name="blog-posts"><ac:parameter ac:name="max">5</ac:parameter></ac:structured-macro>
+
+<!-- widget -->
+<ac:structured-macro ac:name="widget"><ac:parameter ac:name="url"><ri:url ri:value="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/></ac:parameter></ac:structured-macro>
+
+<!-- section-column -->
+<ac:structured-macro ac:name="section"><ac:parameter ac:name="border">true</ac:parameter><ac:rich-text-body><ac:structured-macro ac:name="column"><ac:parameter ac:name="width">30%</ac:parameter><ac:rich-text-body><p>c1</p></ac:rich-text-body></ac:structured-macro><ac:structured-macro ac:name="column"><ac:rich-text-body><p>c2</p></ac:rich-text-body></ac:structured-macro></ac:rich-text-body></ac:structured-macro>
+
+<!-- chart -->
+<ac:structured-macro ac:name="chart"><ac:parameter ac:name="type">pie</ac:parameter><ac:parameter ac:name="title">Pie</ac:parameter><ac:rich-text-body><table><tbody><tr><th>K</th><th>V</th></tr><tr><td>a</td><td>3</td></tr><tr><td>b</td><td>5</td></tr></tbody></table></ac:rich-text-body></ac:structured-macro>
+
+<!-- profile -->
+<ac:structured-macro ac:name="profile"><ac:parameter ac:name="user"><ri:user ri:userkey="{{USER_KEY}}"/></ac:parameter></ac:structured-macro>
+
+<!-- profile-picture -->
+<ac:structured-macro ac:name="profile-picture"><ac:parameter ac:name="User"><ri:user ri:userkey="{{USER_KEY}}"/></ac:parameter></ac:structured-macro>
+
+<!-- contributors -->
+<ac:structured-macro ac:name="contributors"><ac:parameter ac:name="showCount">true</ac:parameter></ac:structured-macro>
+
+<!-- userlister -->
+<ac:structured-macro ac:name="userlister"><ac:parameter ac:name="groups">confluence-administrators</ac:parameter></ac:structured-macro>
+
+<!-- cbl-cql-v3 -->
+<ac:structured-macro ac:name="contentbylabel" ac:schema-version="3"><ac:parameter ac:name="cql">label = &quot;project-doc&quot; and space = &quot;TEST&quot;</ac:parameter></ac:structured-macro>
+
+<!-- cbl-cql-v3-max -->
+<ac:structured-macro ac:name="contentbylabel" ac:schema-version="3"><ac:parameter ac:name="cql">label = &quot;project-doc&quot;</ac:parameter><ac:parameter ac:name="max">5</ac:parameter><ac:parameter ac:name="showLabels">false</ac:parameter><ac:parameter ac:name="excerptType">simple</ac:parameter></ac:structured-macro>
+
+<!-- dsum-cql-nosv -->
+<ac:structured-macro ac:name="detailssummary"><ac:parameter ac:name="cql">label = &quot;project-doc&quot;</ac:parameter></ac:structured-macro>
+
+<!-- ru-none -->
+<ac:structured-macro ac:name="recently-updated"><ac:parameter ac:name="max">3</ac:parameter></ac:structured-macro>
+
+<!-- ru-spaces-ri -->
+<ac:structured-macro ac:name="recently-updated"><ac:parameter ac:name="spaces"><ri:space ri:space-key="TEST"/></ac:parameter><ac:parameter ac:name="max">3</ac:parameter></ac:structured-macro>
+
+<!-- att-image -->
+<p><ac:image ac:width="400"><ri:attachment ri:filename="diagram.png"/></ac:image></p>
+
+<!-- att-viewpdf -->
+<ac:structured-macro ac:name="viewpdf"><ac:parameter ac:name="name"><ri:attachment ri:filename="spec.pdf"/></ac:parameter></ac:structured-macro>
+
+<!-- att-gallery -->
+<ac:structured-macro ac:name="gallery"><ac:parameter ac:name="columns">2</ac:parameter><ac:parameter ac:name="title">Pics</ac:parameter></ac:structured-macro>
+
+<!-- att-attachments -->
+<ac:structured-macro ac:name="attachments"><ac:parameter ac:name="patterns">.*pdf</ac:parameter></ac:structured-macro>
+
+<!-- cft-blueprint -->
+<ac:structured-macro ac:name="create-from-template"><ac:parameter ac:name="blueprintModuleCompleteKey">com.atlassian.confluence.plugins.confluence-business-blueprints:meeting-notes-blueprint</ac:parameter><ac:parameter ac:name="buttonLabel">New notes</ac:parameter><ac:parameter ac:name="spaceKey"><ri:space ri:space-key="TEST"/></ac:parameter></ac:structured-macro>
+
+<!-- jira-skill-example -->
+<ac:structured-macro ac:name="jira"><ac:parameter ac:name="server">Local Jira</ac:parameter><ac:parameter ac:name="serverId">{{JIRA_APPLINK_ID}}</ac:parameter><ac:parameter ac:name="jqlQuery">project = ASDF AND status != Done</ac:parameter><ac:parameter ac:name="columns">key,summary,status,assignee</ac:parameter><ac:parameter ac:name="maximumIssues">20</ac:parameter></ac:structured-macro>
+
+<!-- jira-key-noserver -->
+<ac:structured-macro ac:name="jira"><ac:parameter ac:name="key">ASDF-2</ac:parameter></ac:structured-macro>
+
+<!-- jira-jql-noserver -->
+<ac:structured-macro ac:name="jira"><ac:parameter ac:name="jqlQuery">project = ASDF</ac:parameter></ac:structured-macro>
+
+<!-- jira-count -->
+<ac:structured-macro ac:name="jira"><ac:parameter ac:name="serverId">{{JIRA_APPLINK_ID}}</ac:parameter><ac:parameter ac:name="jqlQuery">project = ASDF</ac:parameter><ac:parameter ac:name="count">true</ac:parameter></ac:structured-macro>
+
+<!-- jira-max1 -->
+<ac:structured-macro ac:name="jira"><ac:parameter ac:name="serverId">{{JIRA_APPLINK_ID}}</ac:parameter><ac:parameter ac:name="jqlQuery">project = ASDF ORDER BY key</ac:parameter><ac:parameter ac:name="maximumIssues">1</ac:parameter><ac:parameter ac:name="columns">key,summary</ac:parameter></ac:structured-macro>
+
+<!-- jirachart-pie -->
+<ac:structured-macro ac:name="jirachart"><ac:parameter ac:name="serverId">{{JIRA_APPLINK_ID}}</ac:parameter><ac:parameter ac:name="jql">project = ASDF</ac:parameter><ac:parameter ac:name="chartType">pie</ac:parameter><ac:parameter ac:name="statType">statuses</ac:parameter></ac:structured-macro>
+
+<!-- ru-two-spaces -->
+<ac:structured-macro ac:name="recently-updated"><ac:parameter ac:name="spaces"><ri:space ri:space-key="TEST"/><ri:space ri:space-key="TEST2"/></ac:parameter><ac:parameter ac:name="max">50</ac:parameter></ac:structured-macro>
+
+<!-- ru-only-test2 -->
+<ac:structured-macro ac:name="recently-updated"><ac:parameter ac:name="spaces"><ri:space ri:space-key="TEST2"/></ac:parameter></ac:structured-macro>
+
+<!-- ru-at-all-ri -->
+<ac:structured-macro ac:name="recently-updated"><ac:parameter ac:name="spaces"><ri:space ri:space-key="@all"/></ac:parameter><ac:parameter ac:name="max">50</ac:parameter></ac:structured-macro>
+
+<!-- ru-alias-space -->
+<ac:structured-macro ac:name="recently-updated"><ac:parameter ac:name="space"><ri:space ri:space-key="TEST2"/></ac:parameter></ac:structured-macro>
+
+<!-- ru-author -->
+<ac:structured-macro ac:name="recently-updated"><ac:parameter ac:name="author"><ri:user ri:userkey="{{USER_KEY}}"/></ac:parameter><ac:parameter ac:name="spaces"><ri:space ri:space-key="TEST2"/></ac:parameter></ac:structured-macro>
+
+<!-- ru-types -->
+<ac:structured-macro ac:name="recently-updated"><ac:parameter ac:name="types">blogpost</ac:parameter></ac:structured-macro>
+
+<!-- children-excerpt-rich -->
+<ac:structured-macro ac:name="children"><ac:parameter ac:name="page"><ac:link><ri:page ri:content-title="Storage Test Root"/></ac:link></ac:parameter><ac:parameter ac:name="excerptType">rich content</ac:parameter><ac:parameter ac:name="first">2</ac:parameter><ac:parameter ac:name="sort">title</ac:parameter></ac:structured-macro>
+
+<!-- children-depth-style -->
+<ac:structured-macro ac:name="children"><ac:parameter ac:name="all">true</ac:parameter><ac:parameter ac:name="depth">1</ac:parameter><ac:parameter ac:name="style">h3</ac:parameter><ac:parameter ac:name="page"><ac:link><ri:page ri:content-title="Storage Test Root"/></ac:link></ac:parameter></ac:structured-macro>
+
+<!-- blog-posts-space -->
+<ac:structured-macro ac:name="blog-posts"><ac:parameter ac:name="spaces"><ri:space ri:space-key="TEST"/></ac:parameter><ac:parameter ac:name="content">titles</ac:parameter></ac:structured-macro>
+
+<!-- blog-posts-author -->
+<ac:structured-macro ac:name="blog-posts"><ac:parameter ac:name="author"><ri:user ri:userkey="{{USER_KEY}}"/></ac:parameter><ac:parameter ac:name="content">excerpts</ac:parameter><ac:parameter ac:name="time">7d</ac:parameter></ac:structured-macro>
+
+<!-- contributors-labels -->
+<ac:structured-macro ac:name="contributors"><ac:parameter ac:name="labels">project-doc</ac:parameter><ac:parameter ac:name="mode">list</ac:parameter><ac:parameter ac:name="showPages">true</ac:parameter><ac:parameter ac:name="include">authors,labels</ac:parameter></ac:structured-macro>
+
+<!-- contributors-spaces -->
+<ac:structured-macro ac:name="contributors"><ac:parameter ac:name="spaces"><ri:space ri:space-key="TEST2"/></ac:parameter><ac:parameter ac:name="mode">list</ac:parameter></ac:structured-macro>
+
+<!-- tr-assignees-again -->
+<ac:structured-macro ac:name="tasks-report-macro"><ac:parameter ac:name="assignees"><ri:user ri:userkey="{{USER_KEY}}"/></ac:parameter><ac:parameter ac:name="status">incomplete</ac:parameter></ac:structured-macro>
+
+<!-- tr-creators -->
+<ac:structured-macro ac:name="tasks-report-macro"><ac:parameter ac:name="creators"><ri:user ri:userkey="{{USER_KEY}}"/></ac:parameter><ac:parameter ac:name="columns">description,assignee,location</ac:parameter><ac:parameter ac:name="pageSize">10</ac:parameter></ac:structured-macro>
+
+<!-- tr-labels -->
+<ac:structured-macro ac:name="tasks-report-macro"><ac:parameter ac:name="labels">project-doc</ac:parameter></ac:structured-macro>
+
+<!-- toc-flat -->
+<h1>Alpha</h1><h2>Beta</h2><h2>Gamma</h2><ac:structured-macro ac:name="toc"><ac:parameter ac:name="type">flat</ac:parameter><ac:parameter ac:name="separator">pipe</ac:parameter></ac:structured-macro>
+
+<!-- toc-outline -->
+<h1>Alpha</h1><h2>Beta</h2><h2>Gamma</h2><ac:structured-macro ac:name="toc"><ac:parameter ac:name="outline">true</ac:parameter><ac:parameter ac:name="minLevel">2</ac:parameter><ac:parameter ac:name="exclude">Gamma</ac:parameter></ac:structured-macro>
+
+<!-- toc-style -->
+<h1>Alpha</h1><h2>Beta</h2><h2>Gamma</h2><ac:structured-macro ac:name="toc"><ac:parameter ac:name="style">square</ac:parameter><ac:parameter ac:name="indent">20px</ac:parameter></ac:structured-macro>
+
+<!-- content-by-user -->
+<ac:structured-macro ac:name="content-by-user"><ac:parameter ac:name=""><ri:user ri:userkey="{{USER_KEY}}"/></ac:parameter></ac:structured-macro>
+
+<!-- change-history -->
+<ac:structured-macro ac:name="change-history"><ac:parameter ac:name="limit">3</ac:parameter></ac:structured-macro>
+
+<!-- livesearch -->
+<ac:structured-macro ac:name="livesearch"><ac:parameter ac:name="spaceKey"><ri:space ri:space-key="TEST"/></ac:parameter><ac:parameter ac:name="placeholder">Find docs</ac:parameter><ac:parameter ac:name="size">large</ac:parameter></ac:structured-macro>
+
+<!-- recently-updated-dashboard -->
+<ac:structured-macro ac:name="recently-updated-dashboard"><ac:parameter ac:name="spaces"><ri:space ri:space-key="TEST"/></ac:parameter><ac:parameter ac:name="types">page</ac:parameter></ac:structured-macro>
+
+<!-- space-attachments -->
+<ac:structured-macro ac:name="space-attachments"><ac:parameter ac:name="space"><ri:space ri:space-key="TEST"/></ac:parameter></ac:structured-macro>
+
+<!-- spaces -->
+<ac:structured-macro ac:name="spaces"><ac:parameter ac:name="">all</ac:parameter></ac:structured-macro>
+
+<!-- navmap -->
+<ac:structured-macro ac:name="navmap"><ac:parameter ac:name="">project-doc</ac:parameter><ac:parameter ac:name="wrapAfter">3</ac:parameter></ac:structured-macro>
+
+<!-- network -->
+<ac:structured-macro ac:name="network"><ac:parameter ac:name="">following</ac:parameter><ac:parameter ac:name="username"><ri:user ri:userkey="{{USER_KEY}}"/></ac:parameter></ac:structured-macro>
+
+<!-- popular-labels -->
+<ac:structured-macro ac:name="popular-labels"><ac:parameter ac:name="count">10</ac:parameter><ac:parameter ac:name="style">heatmap</ac:parameter></ac:structured-macro>
+
+<!-- listlabels -->
+<ac:structured-macro ac:name="listlabels"><ac:parameter ac:name="spaceKey"><ri:space ri:space-key="TEST"/></ac:parameter></ac:structured-macro>
+
+<!-- recently-used-labels -->
+<ac:structured-macro ac:name="recently-used-labels"><ac:parameter ac:name="scope">space</ac:parameter><ac:parameter ac:name="style">table</ac:parameter></ac:structured-macro>
+
+<!-- related-labels -->
+<ac:structured-macro ac:name="related-labels"><ac:parameter ac:name="labels">project-doc</ac:parameter></ac:structured-macro>
+
+<!-- loremipsum -->
+<ac:structured-macro ac:name="loremipsum"><ac:parameter ac:name="">1</ac:parameter></ac:structured-macro>
+
+<!-- contributors-summary -->
+<ac:structured-macro ac:name="contributors-summary"><ac:parameter ac:name="columns">edits,comments</ac:parameter><ac:parameter ac:name="groupby">pages</ac:parameter></ac:structured-macro>
+
+<!-- content-report-table -->
+<ac:structured-macro ac:name="content-report-table"><ac:parameter ac:name="labels">project-doc</ac:parameter><ac:parameter ac:name="spaces"><ri:space ri:space-key="TEST"/></ac:parameter></ac:structured-macro>
+
+<!-- index -->
+<ac:structured-macro ac:name="index"></ac:structured-macro>
+
+<!-- favpages -->
+<ac:structured-macro ac:name="favpages"></ac:structured-macro>
+
+<!-- create-space-button -->
+<ac:structured-macro ac:name="create-space-button"><ac:parameter ac:name="size">small</ac:parameter></ac:structured-macro>
+
+<!-- global-reports -->
+<ac:structured-macro ac:name="global-reports"></ac:structured-macro>
+
+<!-- pagetreesearch -->
+<ac:structured-macro ac:name="pagetreesearch"><ac:parameter ac:name="rootPage">Storage Test Root</ac:parameter></ac:structured-macro>
+
+<!-- excerpt-include-other-space -->
+<ac:structured-macro ac:name="excerpt-include"><ac:parameter ac:name=""><ac:link><ri:page ri:space-key="TEST" ri:content-title="Shared Footer"/></ac:link></ac:parameter></ac:structured-macro>
+
+<!-- status-alias-color -->
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="color">Blue</ac:parameter><ac:parameter ac:name="title">ALIAS</ac:parameter></ac:structured-macro>
+
+<!-- info-icon-false -->
+<ac:structured-macro ac:name="info"><ac:parameter ac:name="icon">false</ac:parameter><ac:rich-text-body><p>x</p></ac:rich-text-body></ac:structured-macro>
+
+<!-- att-viewxls -->
+<ac:structured-macro ac:name="viewxls"><ac:parameter ac:name="name"><ri:attachment ri:filename="book.xlsx"/></ac:parameter><ac:parameter ac:name="sheet">Second</ac:parameter><ac:parameter ac:name="grid">false</ac:parameter></ac:structured-macro>
+
+<!-- att-viewppt -->
+<ac:structured-macro ac:name="viewppt"><ac:parameter ac:name="name"><ri:attachment ri:filename="deck.pptx"/></ac:parameter><ac:parameter ac:name="slide">1</ac:parameter><ac:parameter ac:name="width">400</ac:parameter></ac:structured-macro>
+
+<!-- att-viewfile -->
+<ac:structured-macro ac:name="view-file"><ac:parameter ac:name="name"><ri:attachment ri:filename="spec.pdf"/></ac:parameter></ac:structured-macro>
+
+<!-- att-viewpdf-otherpage -->
+<ac:structured-macro ac:name="viewpdf"><ac:parameter ac:name="name"><ri:attachment ri:filename="spec.pdf"/></ac:parameter><ac:parameter ac:name="page"><ac:link><ri:page ri:content-title="Macro Test"/></ac:link></ac:parameter></ac:structured-macro>
+
+<!-- att-gallery-otherpage-str -->
+<ac:structured-macro ac:name="gallery"><ac:parameter ac:name="page">Macro Test</ac:parameter></ac:structured-macro>
+
+<!-- tr-spaces-test2 -->
+<ac:structured-macro ac:name="tasks-report-macro"><ac:parameter ac:name="spaces">TEST2</ac:parameter></ac:structured-macro>
+
+<!-- tr-pages -->
+<ac:structured-macro ac:name="tasks-report-macro"><ac:parameter ac:name="pages">{{PAGE_ID}}</ac:parameter><ac:parameter ac:name="columns">description,assignee,location</ac:parameter></ac:structured-macro>
+
+<!-- tr-pages-assignees -->
+<ac:structured-macro ac:name="tasks-report-macro"><ac:parameter ac:name="pages">{{PAGE_ID}}</ac:parameter><ac:parameter ac:name="assignees"><ri:user ri:userkey="{{USER_KEY}}"/></ac:parameter></ac:structured-macro>
+
+<!-- task-with-id -->
+<ac:task-list><ac:task><ac:task-id>1</ac:task-id><ac:task-status>incomplete</ac:task-status><ac:task-body><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link> TASKWITHID due <time datetime="2026-11-15"/></ac:task-body></ac:task><ac:task><ac:task-id>2</ac:task-id><ac:task-status>complete</ac:task-status><ac:task-body>DONETASK</ac:task-body></ac:task></ac:task-list>
+
+<!-- tr7-pages -->
+<ac:structured-macro ac:name="tasks-report-macro"><ac:parameter ac:name="pages">{{PAGE_ID}}</ac:parameter></ac:structured-macro>
+
+<!-- tr7-assignees -->
+<ac:structured-macro ac:name="tasks-report-macro"><ac:parameter ac:name="spaces">TEST</ac:parameter><ac:parameter ac:name="assignees"><ri:user ri:userkey="{{USER_KEY}}"/></ac:parameter></ac:structured-macro>
+
+<!-- tr7-complete -->
+<ac:structured-macro ac:name="tasks-report-macro"><ac:parameter ac:name="pages">{{PAGE_ID}}</ac:parameter><ac:parameter ac:name="status">complete</ac:parameter></ac:structured-macro>
+
+<!-- tr7-sort-cols -->
+<ac:structured-macro ac:name="tasks-report-macro"><ac:parameter ac:name="pages">{{PAGE_ID}}</ac:parameter><ac:parameter ac:name="columns">description,duedate,assignee</ac:parameter><ac:parameter ac:name="sortBy">assignee</ac:parameter><ac:parameter ac:name="reverseSort">true</ac:parameter></ac:structured-macro>
+
+<!-- pt-spaces-only -->
+<ac:structured-macro ac:name="pagetree"><ac:parameter ac:name="spaces"><ri:space ri:space-key="TEST2"/></ac:parameter></ac:structured-macro>
+
+<!-- pt-root-home-link -->
+<ac:structured-macro ac:name="pagetree"><ac:parameter ac:name="root"><ac:link><ri:page ri:content-title="@home"/></ac:link></ac:parameter></ac:structured-macro>
+
+<!-- pt-root-self-link -->
+<ac:structured-macro ac:name="pagetree"><ac:parameter ac:name="root"><ac:link><ri:page ri:content-title="@self"/></ac:link></ac:parameter></ac:structured-macro>
+
+<!-- pt-root-home-plus-spaces -->
+<ac:structured-macro ac:name="pagetree"><ac:parameter ac:name="root"><ac:link><ri:page ri:content-title="@home"/></ac:link></ac:parameter><ac:parameter ac:name="spaces"><ri:space ri:space-key="TEST2"/></ac:parameter></ac:structured-macro>
+
+<!-- pt-root-title-plus-spaces -->
+<ac:structured-macro ac:name="pagetree"><ac:parameter ac:name="root"><ac:link><ri:page ri:content-title="Second Space Home"/></ac:link></ac:parameter><ac:parameter ac:name="spaces"><ri:space ri:space-key="TEST2"/></ac:parameter></ac:structured-macro>

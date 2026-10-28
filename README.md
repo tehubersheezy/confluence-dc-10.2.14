@@ -1,6 +1,6 @@
 # confluence-dc-10.2.14
 
-A local Confluence Data Center 10.2.14 running in Docker, with PostgreSQL 16, at http://localhost:8095. It's used to test Confluence storage-format XML. The skill itself is in `~/Projects/confluence-storage`.
+A local Confluence Data Center 10.2.14 running in Docker, with PostgreSQL 16, at http://localhost:8095. It's used to test Confluence storage-format XML. The skill itself is in `.claude/skills/confluence-storage`.
 
 ## Run
 
@@ -39,3 +39,49 @@ The files are:
 - `diagram.png`, `spec.pdf`, `book.xlsx`, `deck.pptx`: attached to the `att-*` test pages.
 
 The user key and application link ID are hard-coded for this instance.
+
+## Python library (`confluence_dc`)
+
+A sync and async client for every Confluence DC 10.2 REST endpoint a regular (non-admin) user can call: 805 endpoints. It's generated from the instance's own class files, so it includes the undocumented APIs the UI uses.
+
+```sh
+uv sync
+```
+
+```python
+from confluence_dc import Confluence, AsyncConfluence
+
+with Confluence("http://localhost:8095", token=PAT) as c:
+    page = c.content.get("294916", expand="body.storage,version")
+    for hit in c.paginate(c.search.cql, cql="space = TEST and type = page"):
+        print(hit["title"])
+
+async with AsyncConfluence("http://localhost:8095", token=PAT) as c:
+    me = await c.users.current()
+```
+
+Endpoints are grouped by stability:
+- `c.content`, `c.spaces`, `c.attachments`, … : `/rest/api`, the documented API.
+- `c.experimental.templates`, … : `/rest/experimental`. These are real features (page templates, content versions, restrictions) that Atlassian still marks experimental.
+- `c.internal.<module>` : undocumented plugin APIs (inline comments, likes, tasks, create dialog, …). They can change between releases.
+
+Methods return parsed JSON. Errors raise subclasses of `ConfluenceError` (`NotFoundError`, `PermissionDeniedError`, …). `c.request(method, path, ...)` reaches anything else, including admin endpoints.
+
+### Regenerating
+
+```sh
+docker exec -i confluence python3 - < api-inventory/scan.py > api-inventory/endpoints.json
+set -a; source .env; set +a
+python3 api-inventory/probe.py api-inventory/endpoints.json api-inventory/probe.json
+python3 api-inventory/classify.py
+uv run python codegen/generate.py
+```
+
+`scan.py` reads every bundled plugin's JAX-RS resources. `probe.py` calls the parameter-free GETs as admin and as the regular user. `classify.py` drops admin-only endpoints. Documented endpoints need a curated name in `codegen/names.py`, and the generator fails if one is missing.
+
+### Tests
+
+```sh
+uv run pytest            # unit tests; live tests skip without CONFLUENCE_USER_PAT
+set -a; source .env; set +a; uv run pytest   # also runs live tests as the regular user
+```

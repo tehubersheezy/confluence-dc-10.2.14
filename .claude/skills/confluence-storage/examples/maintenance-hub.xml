@@ -1,0 +1,337 @@
+<ac:layout>
+  <ac:layout-section ac:type="single">
+    <ac:layout-cell>
+      <ac:structured-macro ac:name="info">
+        <ac:parameter ac:name="title">Maintenance window: Saturday, November 14 · 22:00–02:00 ET</ac:parameter>
+        <ac:rich-text-body>
+          <p>Three changes ship in one window. Customer-facing services stay up; internal tools may be briefly read-only. Overall status <ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Green</ac:parameter><ac:parameter ac:name="title">ON TRACK</ac:parameter></ac:structured-macro> <ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Blue</ac:parameter><ac:parameter ac:name="title">CAB APPROVED</ac:parameter></ac:structured-macro></p>
+        </ac:rich-text-body>
+      </ac:structured-macro>
+    </ac:layout-cell>
+  </ac:layout-section>
+  <ac:layout-section ac:type="two_right_sidebar">
+    <ac:layout-cell>
+      <ac:structured-macro ac:name="anchor">
+        <ac:parameter ac:name="">overview</ac:parameter>
+      </ac:structured-macro>
+      <h2>Overview</h2>
+      <ac:structured-macro ac:name="excerpt">
+        <ac:rich-text-body>
+          <p>A single coordinated window to rotate TLS certificates, patch the Postgres fleet, and verify Confluence after its platform update — with a tested rollback for each change.</p>
+        </ac:rich-text-body>
+      </ac:structured-macro>
+      <p>Each change has its own runbook below. Owners update their task list during the window, and the Jira table refreshes live, so this page is the single place to check progress.</p>
+      <h3>Goals</h3>
+      <ul>
+        <li>Zero customer-facing downtime</li>
+        <li>Every change verified before the next one starts</li>
+        <li>Rollback available within 15 minutes at every step</li>
+      </ul>
+    </ac:layout-cell>
+    <ac:layout-cell>
+      <ac:structured-macro ac:name="panel">
+        <ac:parameter ac:name="title">On this page</ac:parameter>
+        <ac:parameter ac:name="borderStyle">solid</ac:parameter>
+        <ac:rich-text-body>
+          <ac:structured-macro ac:name="toc">
+            <ac:parameter ac:name="maxLevel">2</ac:parameter>
+            <ac:parameter ac:name="minLevel">2</ac:parameter>
+            <ac:parameter ac:name="style">none</ac:parameter>
+          </ac:structured-macro>
+        </ac:rich-text-body>
+      </ac:structured-macro>
+      <ac:structured-macro ac:name="details">
+        <ac:rich-text-body>
+          <table>
+            <tbody>
+              <tr>
+                <th>Change owner</th>
+                <td><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></td>
+              </tr>
+              <tr>
+                <th>Window</th>
+                <td><time datetime="2026-11-14"/> 22:00–02:00 ET</td>
+              </tr>
+              <tr>
+                <th>Status</th>
+                <td><ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Green</ac:parameter><ac:parameter ac:name="title">ON TRACK</ac:parameter></ac:structured-macro></td>
+              </tr>
+              <tr>
+                <th>Risk</th>
+                <td><ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Yellow</ac:parameter><ac:parameter ac:name="title">MEDIUM</ac:parameter></ac:structured-macro></td>
+              </tr>
+              <tr>
+                <th>Change ticket</th>
+                <td><ac:structured-macro ac:name="jira"><ac:parameter ac:name="serverId">{{JIRA_APPLINK_ID}}</ac:parameter><ac:parameter ac:name="key">ASDF-1</ac:parameter><ac:parameter ac:name="showSummary">true</ac:parameter></ac:structured-macro></td>
+              </tr>
+            </tbody>
+          </table>
+        </ac:rich-text-body>
+      </ac:structured-macro>
+    </ac:layout-cell>
+  </ac:layout-section>
+  <ac:layout-section ac:type="three_equal">
+    <ac:layout-cell>
+      <ac:structured-macro ac:name="panel">
+        <ac:parameter ac:name="title">Certificates</ac:parameter>
+        <ac:parameter ac:name="titleBGColor">#0052CC</ac:parameter>
+        <ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+        <ac:parameter ac:name="borderColor">#0052CC</ac:parameter>
+        <ac:parameter ac:name="borderStyle">solid</ac:parameter>
+        <ac:rich-text-body>
+          <p><ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Green</ac:parameter><ac:parameter ac:name="title">READY</ac:parameter></ac:structured-macro></p>
+          <p>Wildcard and internal certificates, staged on the load balancers.</p>
+          <ac:structured-macro ac:name="jira">
+            <ac:parameter ac:name="serverId">{{JIRA_APPLINK_ID}}</ac:parameter>
+            <ac:parameter ac:name="key">ASDF-1</ac:parameter>
+            <ac:parameter ac:name="showSummary">true</ac:parameter>
+          </ac:structured-macro>
+        </ac:rich-text-body>
+      </ac:structured-macro>
+    </ac:layout-cell>
+    <ac:layout-cell>
+      <ac:structured-macro ac:name="panel">
+        <ac:parameter ac:name="title">Database</ac:parameter>
+        <ac:parameter ac:name="titleBGColor">#FF991F</ac:parameter>
+        <ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+        <ac:parameter ac:name="borderColor">#FF991F</ac:parameter>
+        <ac:parameter ac:name="borderStyle">solid</ac:parameter>
+        <ac:rich-text-body>
+          <p><ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Yellow</ac:parameter><ac:parameter ac:name="title">NEEDS REVIEW</ac:parameter></ac:structured-macro></p>
+          <p>Rolling patch of the primary and two replicas to 16.4.</p>
+          <ac:structured-macro ac:name="jira">
+            <ac:parameter ac:name="serverId">{{JIRA_APPLINK_ID}}</ac:parameter>
+            <ac:parameter ac:name="key">ASDF-2</ac:parameter>
+            <ac:parameter ac:name="showSummary">true</ac:parameter>
+          </ac:structured-macro>
+        </ac:rich-text-body>
+      </ac:structured-macro>
+    </ac:layout-cell>
+    <ac:layout-cell>
+      <ac:structured-macro ac:name="panel">
+        <ac:parameter ac:name="title">Confluence</ac:parameter>
+        <ac:parameter ac:name="titleBGColor">#6554C0</ac:parameter>
+        <ac:parameter ac:name="titleColor">#FFFFFF</ac:parameter>
+        <ac:parameter ac:name="borderColor">#6554C0</ac:parameter>
+        <ac:parameter ac:name="borderStyle">solid</ac:parameter>
+        <ac:rich-text-body>
+          <p><ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Blue</ac:parameter><ac:parameter ac:name="title">SCHEDULED</ac:parameter></ac:structured-macro></p>
+          <p>Post-update check of macros and the Jira link.</p>
+          <ac:structured-macro ac:name="jira">
+            <ac:parameter ac:name="serverId">{{JIRA_APPLINK_ID}}</ac:parameter>
+            <ac:parameter ac:name="key">ASDF-3</ac:parameter>
+            <ac:parameter ac:name="showSummary">true</ac:parameter>
+          </ac:structured-macro>
+        </ac:rich-text-body>
+      </ac:structured-macro>
+    </ac:layout-cell>
+  </ac:layout-section>
+  <ac:layout-section ac:type="single">
+    <ac:layout-cell>
+      <ac:structured-macro ac:name="anchor">
+        <ac:parameter ac:name="">work</ac:parameter>
+      </ac:structured-macro>
+      <h2>Work items</h2>
+      <ac:structured-macro ac:name="jira">
+        <ac:parameter ac:name="serverId">{{JIRA_APPLINK_ID}}</ac:parameter>
+        <ac:parameter ac:name="jqlQuery">project = ASDF ORDER BY status ASC, key ASC</ac:parameter>
+        <ac:parameter ac:name="columns">type,key,summary,status,assignee,updated</ac:parameter>
+        <ac:parameter ac:name="maximumIssues">20</ac:parameter>
+      </ac:structured-macro>
+    </ac:layout-cell>
+  </ac:layout-section>
+  <ac:layout-section ac:type="two_equal">
+    <ac:layout-cell>
+      <h3>Issues by status</h3>
+      <ac:structured-macro ac:name="jirachart">
+        <ac:parameter ac:name="serverId">{{JIRA_APPLINK_ID}}</ac:parameter>
+        <ac:parameter ac:name="jql">project = ASDF</ac:parameter>
+        <ac:parameter ac:name="chartType">pie</ac:parameter>
+        <ac:parameter ac:name="statType">statuses</ac:parameter>
+      </ac:structured-macro>
+    </ac:layout-cell>
+    <ac:layout-cell>
+      <h3>Planned hours by team</h3>
+      <ac:structured-macro ac:name="chart">
+        <ac:parameter ac:name="type">bar</ac:parameter>
+        <ac:parameter ac:name="stacked">true</ac:parameter>
+        <ac:parameter ac:name="width">420</ac:parameter>
+        <ac:parameter ac:name="height">300</ac:parameter>
+        <ac:parameter ac:name="legend">true</ac:parameter>
+        <ac:parameter ac:name="dataOrientation">vertical</ac:parameter>
+        <ac:parameter ac:name="colors">#0052CC,#00B8D9</ac:parameter>
+        <ac:parameter ac:name="yLabel">Hours</ac:parameter>
+        <ac:rich-text-body>
+          <table>
+            <tbody>
+              <tr>
+                <th>Team</th>
+                <th>Prep</th>
+                <th>Window</th>
+              </tr>
+              <tr>
+                <td>Networking</td>
+                <td>3</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Data</td>
+                <td>5</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Platform</td>
+                <td>2</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </ac:rich-text-body>
+      </ac:structured-macro>
+    </ac:layout-cell>
+  </ac:layout-section>
+  <ac:layout-section ac:type="single">
+    <ac:layout-cell>
+      <ac:structured-macro ac:name="anchor">
+        <ac:parameter ac:name="">runbooks</ac:parameter>
+      </ac:structured-macro>
+      <h2>Runbooks</h2>
+      <ac:structured-macro ac:name="detailssummary">
+        <ac:parameter ac:name="cql">label = "infra-runbook" and space = currentSpace()</ac:parameter>
+        <ac:parameter ac:name="headings">Owner,Duration,Risk,Jira</ac:parameter>
+        <ac:parameter ac:name="firstcolumn">Runbook</ac:parameter>
+        <ac:parameter ac:name="sortBy">Risk</ac:parameter>
+      </ac:structured-macro>
+      <h3>Summaries</h3>
+      <ac:structured-macro ac:name="children">
+        <ac:parameter ac:name="excerptType">simple</ac:parameter>
+        <ac:parameter ac:name="sort">title</ac:parameter>
+      </ac:structured-macro>
+    </ac:layout-cell>
+  </ac:layout-section>
+  <ac:layout-section ac:type="two_equal">
+    <ac:layout-cell>
+      <ac:structured-macro ac:name="anchor">
+        <ac:parameter ac:name="">checklist</ac:parameter>
+      </ac:structured-macro>
+      <h2>Window checklist</h2>
+      <ac:task-list>
+        <ac:task>
+          <ac:task-id>1</ac:task-id>
+          <ac:task-status>complete</ac:task-status>
+          <ac:task-body>CAB approval recorded <ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></ac:task-body>
+        </ac:task>
+        <ac:task>
+          <ac:task-id>2</ac:task-id>
+          <ac:task-status>complete</ac:task-status>
+          <ac:task-body>Status page notice drafted</ac:task-body>
+        </ac:task>
+        <ac:task>
+          <ac:task-id>3</ac:task-id>
+          <ac:task-status>incomplete</ac:task-status>
+          <ac:task-body>Announce the window in #ops <time datetime="2026-11-13"/></ac:task-body>
+        </ac:task>
+        <ac:task>
+          <ac:task-id>4</ac:task-id>
+          <ac:task-status>incomplete</ac:task-status>
+          <ac:task-body>Confirm backups are verified <ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link> <time datetime="2026-11-14"/></ac:task-body>
+        </ac:task>
+        <ac:task>
+          <ac:task-id>5</ac:task-id>
+          <ac:task-status>incomplete</ac:task-status>
+          <ac:task-body>Post the all-clear and close the change</ac:task-body>
+        </ac:task>
+      </ac:task-list>
+    </ac:layout-cell>
+    <ac:layout-cell>
+      <ac:structured-macro ac:name="anchor">
+        <ac:parameter ac:name="">before</ac:parameter>
+      </ac:structured-macro>
+      <h2>Before you start</h2>
+      <ac:structured-macro ac:name="warning">
+        <ac:parameter ac:name="title">Stop conditions</ac:parameter>
+        <ac:rich-text-body>
+          <p>Halt the window if replication lag exceeds 30 seconds or error rates double for five minutes.</p>
+        </ac:rich-text-body>
+      </ac:structured-macro>
+      <ac:structured-macro ac:name="tip">
+        <ac:parameter ac:name="title">Bridge</ac:parameter>
+        <ac:rich-text-body>
+          <p>Join the maintenance bridge 15 minutes early. The incident commander calls each go/no-go.</p>
+        </ac:rich-text-body>
+      </ac:structured-macro>
+    </ac:layout-cell>
+  </ac:layout-section>
+  <ac:layout-section ac:type="single">
+    <ac:layout-cell>
+      <ac:structured-macro ac:name="anchor">
+        <ac:parameter ac:name="">rollback</ac:parameter>
+      </ac:structured-macro>
+      <h2>Rollback plans</h2>
+      <ac:structured-macro ac:name="expand">
+        <ac:parameter ac:name="title">Certificates — restore the previous listener</ac:parameter>
+        <ac:rich-text-body>
+          <ol>
+            <li>Reattach the previous certificate to each listener.</li>
+            <li>Confirm the old fingerprint from a client.</li>
+            <li>Record the rollback on ASDF-1.</li>
+          </ol>
+        </ac:rich-text-body>
+      </ac:structured-macro>
+      <ac:structured-macro ac:name="expand">
+        <ac:parameter ac:name="title">Database — fail back to the unpatched primary</ac:parameter>
+        <ac:rich-text-body>
+          <ol>
+            <li>Promote the unpatched replica.</li>
+            <li>Repoint the connection pooler.</li>
+            <li>Rebuild the patched node from the base backup.</li>
+          </ol>
+        </ac:rich-text-body>
+      </ac:structured-macro>
+      <ac:structured-macro ac:name="expand">
+        <ac:parameter ac:name="title">Confluence — revert the configuration change</ac:parameter>
+        <ac:rich-text-body>
+          <ol>
+            <li>Restore the saved configuration.</li>
+            <li>Restart the node.</li>
+            <li>Re-run the storage format checks.</li>
+          </ol>
+        </ac:rich-text-body>
+      </ac:structured-macro>
+    </ac:layout-cell>
+  </ac:layout-section>
+  <ac:layout-section ac:type="three_equal">
+    <ac:layout-cell>
+      <h3>Related pages</h3>
+      <ac:structured-macro ac:name="contentbylabel" ac:schema-version="3">
+        <ac:parameter ac:name="cql">label in ("infra","infra-runbook") and space = currentSpace()</ac:parameter>
+        <ac:parameter ac:name="max">6</ac:parameter>
+        <ac:parameter ac:name="showLabels">false</ac:parameter>
+        <ac:parameter ac:name="showSpace">false</ac:parameter>
+        <ac:parameter ac:name="excludeCurrent">true</ac:parameter>
+      </ac:structured-macro>
+    </ac:layout-cell>
+    <ac:layout-cell>
+      <h3>Recent activity</h3>
+      <ac:structured-macro ac:name="recently-updated">
+        <ac:parameter ac:name="spaces"><ri:space ri:space-key="{{SPACE_KEY}}"/></ac:parameter>
+        <ac:parameter ac:name="labels">infra-runbook</ac:parameter>
+        <ac:parameter ac:name="max">5</ac:parameter>
+        <ac:parameter ac:name="theme">concise</ac:parameter>
+        <ac:parameter ac:name="hideHeading">true</ac:parameter>
+      </ac:structured-macro>
+    </ac:layout-cell>
+    <ac:layout-cell>
+      <h3>Contacts</h3>
+      <ac:structured-macro ac:name="profile">
+        <ac:parameter ac:name="user"><ri:user ri:userkey="{{USER_KEY}}"/></ac:parameter>
+      </ac:structured-macro>
+    </ac:layout-cell>
+  </ac:layout-section>
+  <ac:layout-section ac:type="single">
+    <ac:layout-cell>
+      <hr/>
+      <p style="text-align: center;"><ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Grey</ac:parameter><ac:parameter ac:name="title">LAST REVIEWED</ac:parameter><ac:parameter ac:name="subtle">true</ac:parameter></ac:structured-macro> <time datetime="2026-10-27"/> · <ac:link ac:anchor="overview"><ac:plain-text-link-body><![CDATA[Back to top]]></ac:plain-text-link-body></ac:link></p>
+    </ac:layout-cell>
+  </ac:layout-section>
+</ac:layout>

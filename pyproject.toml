@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "confluence-dc"
+version = "0.1.0"
+description = "Python client for the Confluence Data Center REST APIs, sync and async"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["httpx>=0.27,<1"]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "pytest-asyncio>=0.24", "ruff>=0.14"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/confluence_dc"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+markers = ["live: needs the local Confluence instance (CONFLUENCE_URL, CONFLUENCE_PAT)"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = ["storage-tests", "api-inventory", "templates", ".claude"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/confluence_dc/_api/**" = ["E501", "A002"]

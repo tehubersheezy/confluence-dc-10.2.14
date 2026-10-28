@@ -3,3 +3,6 @@ storage-tests/perpage.json
 storage-tests/results.json
 __pycache__/
 .DS_Store
+.venv/
+.pytest_cache/
+.ruff_cache/

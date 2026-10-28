@@ -1,0 +1,54 @@
+<ac:structured-macro ac:name="excerpt">
+  <ac:parameter ac:name="hidden">false</ac:parameter>
+  <ac:rich-text-body>
+    <p>Rotate the wildcard and internal service certificates before the November 30 expiry.</p>
+  </ac:rich-text-body>
+</ac:structured-macro>
+<ac:structured-macro ac:name="details">
+  <ac:rich-text-body>
+    <table>
+      <tbody>
+        <tr>
+          <th>Owner</th>
+          <td><ac:link><ri:user ri:userkey="{{USER_KEY}}"/></ac:link></td>
+        </tr>
+        <tr>
+          <th>Duration</th>
+          <td>45 min</td>
+        </tr>
+        <tr>
+          <th>Risk</th>
+          <td><ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Green</ac:parameter><ac:parameter ac:name="title">LOW</ac:parameter></ac:structured-macro></td>
+        </tr>
+        <tr>
+          <th>Jira</th>
+          <td><ac:structured-macro ac:name="jira"><ac:parameter ac:name="serverId">{{JIRA_APPLINK_ID}}</ac:parameter><ac:parameter ac:name="key">ASDF-1</ac:parameter><ac:parameter ac:name="showSummary">true</ac:parameter></ac:structured-macro></td>
+        </tr>
+      </tbody>
+    </table>
+  </ac:rich-text-body>
+</ac:structured-macro>
+<h2>Steps</h2>
+<ac:task-list>
+  <ac:task>
+    <ac:task-id>1</ac:task-id>
+    <ac:task-status>complete</ac:task-status>
+    <ac:task-body>Request new wildcard certificate from the CA</ac:task-body>
+  </ac:task>
+  <ac:task>
+    <ac:task-id>2</ac:task-id>
+    <ac:task-status>incomplete</ac:task-status>
+    <ac:task-body>Stage certificates on the load balancers <time datetime="2026-11-12"/></ac:task-body>
+  </ac:task>
+  <ac:task>
+    <ac:task-id>3</ac:task-id>
+    <ac:task-status>incomplete</ac:task-status>
+    <ac:task-body>Swap listeners during the window and verify the TLS handshake</ac:task-body>
+  </ac:task>
+</ac:task-list>
+<ac:structured-macro ac:name="note">
+  <ac:parameter ac:name="title">Rollback</ac:parameter>
+  <ac:rich-text-body>
+    <p>Every step is reversible. If verification fails, stop and follow the rollback section on the hub page.</p>
+  </ac:rich-text-body>
+</ac:structured-macro>

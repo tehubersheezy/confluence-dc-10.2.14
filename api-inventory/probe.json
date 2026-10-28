@@ -1,0 +1,2078 @@
+{
+ "/rest/activities/1.0": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/activity-stream/1.0/config": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/activity-stream/1.0/preferences": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/activity-stream/1.0/url-proxy": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/activity-stream/1.0/validate": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/analytics/1.0/config": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/analytics/1.0/config/connectivity-check": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/analytics/1.0/config/upload": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/analytics/1.0/email/trackOpen": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/analytics/1.0/report": {
+  "admin": 400,
+  "user": 403
+ },
+ "/rest/analytics/1.0/report/whitelist": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/analytics/1.0/report/whitelist/search": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/api/accessmode": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/api/admin/users/list/active": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/api/audit": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/api/backup-restore/jobs": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/api/backup-restore/restore/files": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/api/cluster/nodes": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/api/color-scheme": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/api/color-scheme/default": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/api/content": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/api/content/scan": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/api/content/search": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/api/group": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/api/group/groupancestor": {
+  "admin": 500,
+  "user": 403
+ },
+ "/rest/api/group/groupmember": {
+  "admin": 500,
+  "user": 403
+ },
+ "/rest/api/group/groupparent": {
+  "admin": 500,
+  "user": 403
+ },
+ "/rest/api/group/info": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/api/group/member": {
+  "admin": 500,
+  "user": 403
+ },
+ "/rest/api/index/reindex": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/api/instance-metrics": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/api/label/labels": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/api/label/popular": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/api/label/recent": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/api/longtask": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/api/permissions": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/api/permissions/anonymous": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/api/permissions/unlicensed": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/api/search": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/api/server-information": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/api/space": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/api/user": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/api/user/anonymous": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/api/user/current": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/api/user/list": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/api/user/memberof": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/api/webhooks": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/app-usage/1.0/apps": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/app-usage/1.0/common-usage-data/api-usage": {
+  "admin": 400,
+  "user": 403
+ },
+ "/rest/app-usage/1.0/common-usage-data/database-tables": {
+  "admin": 400,
+  "user": 403
+ },
+ "/rest/app-usage/1.0/macro-usage": {
+  "admin": 400,
+  "user": 403
+ },
+ "/rest/app-usage/1.0/trigger/flush-rest-events-to-db": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/app-usage/1.0/trigger/flush-user-interactions-to-db/page-views": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/app-usage/1.0/user-interactions/page-views": {
+  "admin": 400,
+  "user": 403
+ },
+ "/rest/applinks/1.0/applicationlink": {
+  "admin": 200,
+  "user": 401
+ },
+ "/rest/applinks/1.0/applicationlinkForm/manifest": {
+  "admin": 400,
+  "user": 401
+ },
+ "/rest/applinks/1.0/authenticationinfo": {
+  "admin": 200,
+  "user": 401
+ },
+ "/rest/applinks/1.0/entities": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/applinks/1.0/listApplicationlinks": {
+  "admin": 200,
+  "user": 401
+ },
+ "/rest/applinks/1.0/manifest": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/applinks/1.0/orphaned-trust": {
+  "admin": 200,
+  "user": 401
+ },
+ "/rest/applinks/2.0/applicationlink": {
+  "admin": 200,
+  "user": 401
+ },
+ "/rest/applinks/2.0/applicationlinkForm/manifest": {
+  "admin": 400,
+  "user": 401
+ },
+ "/rest/applinks/2.0/authenticationinfo": {
+  "admin": 200,
+  "user": 401
+ },
+ "/rest/applinks/2.0/entities": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/applinks/2.0/listApplicationlinks": {
+  "admin": 200,
+  "user": 401
+ },
+ "/rest/applinks/2.0/manifest": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/applinks/2.0/orphaned-trust": {
+  "admin": 200,
+  "user": 401
+ },
+ "/rest/applinks/3.0/applicationlink": {
+  "admin": 200,
+  "user": 401
+ },
+ "/rest/applinks/3.0/applicationlinkForm/manifest": {
+  "admin": 400,
+  "user": 401
+ },
+ "/rest/applinks/3.0/applinks": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/applinks/3.0/authenticationinfo": {
+  "admin": 200,
+  "user": 401
+ },
+ "/rest/applinks/3.0/capabilities": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/applinks/3.0/entities": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/applinks/3.0/feature-discovery": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/applinks/3.0/listApplicationlinks": {
+  "admin": 200,
+  "user": 401
+ },
+ "/rest/applinks/3.0/manifest": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/applinks/3.0/oauth2/applinks": {
+  "admin": 400,
+  "user": 403
+ },
+ "/rest/applinks/3.0/orphaned-trust": {
+  "admin": 200,
+  "user": 401
+ },
+ "/rest/applinks/3.0/uniconn/backbone-applinks": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/applinks/3.0/uniconn/metadata": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/applinks/3.0/uniconn/product-connections": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/appmonitoring/1/alarms": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/appmonitoring/1/alarms/active": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/appmonitoring/1/alarms/check": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/appmonitoring/1/errors": {
+  "admin": 500,
+  "user": 403
+ },
+ "/rest/appmonitoring/1/errors/cluster-status": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/appmonitoring/1/errors/mappings": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/appmonitoring/1/errors/status": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/atlassian-cluster-monitoring/cluster/current-node": {
+  "admin": 501,
+  "user": 403
+ },
+ "/rest/atlassian-cluster-monitoring/cluster/nodes": {
+  "admin": 501,
+  "user": 403
+ },
+ "/rest/atlassian-cluster-monitoring/cluster/suppliers": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/atlassian-theme/1/user-preferences": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/attachments/1.0/details/preview": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/auditing/1.0/configuration/coverage": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/auditing/1.0/configuration/denylist": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/auditing/1.0/configuration/retention": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/auditing/1.0/configuration/retention/file": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/auditing/1.0/delegatedEvents": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/auditing/1.0/events": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/auditing/1.0/lookup/author": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/auditing/1.0/statistics/database/usage": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/authconfig/1.0/idps": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/authconfig/1.0/jit-users": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/authconfig/1.0/login-options": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/authconfig/1.0/saml/certificate": {
+  "admin": 404,
+  "user": 403
+ },
+ "/rest/authconfig/1.0/sso": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/autoconvert/1.0/cloudappembed": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/autoconvert/1.0/shortcutlinkconfigurations": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/basicauth/1.0/config": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/cacheManagement/1.0/stats": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/capabilities/aggregate-root-link/1.0": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/capabilities/aggregate-root/1.0": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/children-macro/browser/settings": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/client-plugins/1.0/client-plugins/items": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/collaborative-editing/feedback/1.0/file": {
+  "admin": 500,
+  "user": 403
+ },
+ "/rest/collaborative-editing/feedback/1.0/file/list": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/collaborative-editing/feedback/1.0/settings": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/collaborative-editing/feedback/1.0/settings/collab": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/com.atlassian.confluence.contributors/1.0/contributors": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/confanalytics/1.0/content/attachments/views": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/confanalytics/1.0/content/details": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/confanalytics/1.0/content/viewsByDate": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/confanalytics/1.0/content/viewsByUser": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/confanalytics/1.0/estimation/reportTiming": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/confanalytics/1.0/event": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/confanalytics/1.0/instance/activityByDate": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/confanalytics/1.0/instance/activityBySpace.xlsx": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/confanalytics/1.0/instance/activityByUser.xlsx": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/confanalytics/1.0/instance/details": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/confanalytics/1.0/instance/paginated/activityBySpace": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/confanalytics/1.0/instance/paginated/activityByUser": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/confanalytics/1.0/instance/restrictions": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/confanalytics/1.0/settings": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/confanalytics/1.0/settings/dataRetention": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/confanalytics/1.0/settings/eventLimit": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/confanalytics/1.0/settings/privacy": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/confanalytics/1.0/settings/rateLimit": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/confanalytics/1.0/settings/timezone": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/confanalytics/1.0/space/activityByDate": {
+  "admin": 403,
+  "user": 403
+ },
+ "/rest/confanalytics/1.0/space/activityByUser.xlsx": {
+  "admin": 403,
+  "user": 403
+ },
+ "/rest/confanalytics/1.0/space/contentViews.xlsx": {
+  "admin": 403,
+  "user": 403
+ },
+ "/rest/confanalytics/1.0/space/details": {
+  "admin": 403,
+  "user": 403
+ },
+ "/rest/confanalytics/1.0/space/logo": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/confanalytics/1.0/space/paginated/activityByUser": {
+  "admin": 403,
+  "user": 403
+ },
+ "/rest/confanalytics/1.0/space/paginated/contentViews": {
+  "admin": 403,
+  "user": 403
+ },
+ "/rest/confanalytics/1.0/space/restrictions": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/confluence-dashboard/1/dashboard-view-model": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/confluence-dashboard/1/user-hover": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/confluenceshortcuts/1.0/enabled": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/copy/1.0/copy/space-content-count": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/copy/1.0/copy/task": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/copy/1.0/license/expired": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/cql/contenttypes": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/cql/expressions": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/cql/fields": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/create-dialog/1.0/blueprints/can-create-page": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/create-dialog/1.0/blueprints/get": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/create-dialog/1.0/blueprints/list": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/create-dialog/1.0/blueprints/web-items": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/create-dialog/1.0/promotion/promote-template": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/create-dialog/1.0/space-blueprint/dialog/web-items": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/create-dialog/1.0/space-blueprint/list": {
+  "admin": 200,
+  "user": 400
+ },
+ "/rest/create-dialog/1.0/spaces": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/create-dialog/1.0/spaces/adminCheck": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/create-dialog/1.0/spaces/can-create-spaces": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/create-dialog/1.0/templates": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/createjiracontent/1.0/find-epic-issue": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/createjiracontent/1.0/get-jira-servers": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/crowd/1/application": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/crowd/1/directory": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/crowd/1/scheduler/future-schedules": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/custom-apps/1.0/customapps/groups": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/custom-apps/1.0/customapps/list": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/daily-summary-email/1.0/admin": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/dashboardmacros/1.0/default": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/dashboardmacros/1.0/global-entities/network": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/dashboardmacros/1.0/global-entities/pages": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/dashboardmacros/1.0/global-entities/spaces": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/dashboardmacros/1.0/updates": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/datapipeline/1.0/config/export-path": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/datapipeline/1.0/config/optout": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/datapipeline/1.0/config/optout-files": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/datapipeline/1.0/config/optout-files/supported-files": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/datapipeline/1.0/config/schedule": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/datapipeline/1.0/config/schema": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/datapipeline/1.0/export": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/datapipeline/1.0/history": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/datapipeline/1.0/ping": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/diagnostics/1.0/alerts": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/diagnostics/1.0/reports/alerts": {
+  "admin": 400,
+  "user": 403
+ },
+ "/rest/drag-and-drop/1/tip/setting": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/emoticons/1.0": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/emoticons/1.0/custom": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/experimental/collab/history/count": {
+  "admin": 200,
+  "user": 500
+ },
+ "/rest/experimental/group": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/experimental/search": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/experimental/template/blueprint": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/experimental/template/page": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/experimental/user": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/experimental/user/anonymous": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/experimental/user/current": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/experimental/user/memberof": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/experimental/webfragment/panels": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/experimental/webfragment/section": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/fasterpermissions/1/state": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/feature-discovery/1.0/discovered": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/graph": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/graph/_schema": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/helptips/1.0/tips": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/highlighting/1.0/panel-items": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/ia/1.0/link/advanced": {
+  "admin": 404,
+  "user": 404
+ },
+ "/rest/ia/1.0/link/main": {
+  "admin": 404,
+  "user": 404
+ },
+ "/rest/ia/1.0/link/quick": {
+  "admin": 404,
+  "user": 404
+ },
+ "/rest/ia/1.0/pagetree/blog": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/ia/1.0/pagetree/blog/subtree": {
+  "admin": 404,
+  "user": 404
+ },
+ "/rest/ia/1.0/space": {
+  "admin": 404,
+  "user": 404
+ },
+ "/rest/ia/1.0/space/childPagesContextualNav": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/ia/1.0/space/defaultLogo": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/ia/1.0/spacesmenu": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/ia/1.0/spacesmenu/recent": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/image-effects/1.0/config": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/inlinecomments/1.0/comments": {
+  "admin": 404,
+  "user": 404
+ },
+ "/rest/inlinetasks/1/my-task-report": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/inlinetasks/1/task": {
+  "admin": 404,
+  "user": 404
+ },
+ "/rest/inlinetasks/1/task-report": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/internal/sync/capability/rovo": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/internal/sync/contentmanagement/event": {
+  "admin": 400,
+  "user": 403
+ },
+ "/rest/internal/sync/contentmanagement/event/subscriptions": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/internal/sync/permission/event": {
+  "admin": 400,
+  "user": 403
+ },
+ "/rest/internal/sync/permission/event/subscriptions": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/internal/sync/space/inclusion/filter": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/internal/sync/space/limitedspaces/all": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/internal/sync/usermanagement/event": {
+  "admin": 400,
+  "user": 403
+ },
+ "/rest/internal/sync/usermanagement/event/subscriptions": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/jira-integration/1.0/issues": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/jira-integration/1.0/issues/assignedToMe": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/jira-integration/1.0/issues/findValidIssues": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/jira-integration/1.0/servers": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/jira-metadata/1.0/metadata": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/jira-metadata/1.0/metadata/aggregate": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/jiraanywhere/1.0/confluence-view-in-jira/jira-applink-id": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/jiraanywhere/1.0/confluence-view-in-jira/linked-spaces": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/jiraanywhere/1.0/confluence-view-in-jira/od-application-link-id": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/jiraanywhere/1.0/servers": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/knowledge-base/1.0/permissions": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/labels/1/autocomplete": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/license/1.0/license/details": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/license/1.0/license/maxUsers": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/license/1.0/license/organisation": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/license/1.0/license/remainingSeats": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/license/1.0/license/userCount": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/masterdetail/1.0/detailssummary/lines": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/masterdetail/1.0/detailssummarytest/create": {
+  "admin": 404,
+  "user": 404
+ },
+ "/rest/mentions/1/network": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/menu/1.0/appswitcher": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/menu/1.0/userdata": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/migration/1.0/agent/chat/inline-suggestion": {
+  "admin": 404,
+  "user": 403
+ },
+ "/rest/migration/1.0/agent/display-agent": {
+  "admin": 404,
+  "user": 403
+ },
+ "/rest/migration/1.0/app": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/app-migration/transfer/log/csv": {
+  "admin": 500,
+  "user": 403
+ },
+ "/rest/migration/1.0/app-migration/transfer/log/enabled": {
+  "admin": 500,
+  "user": 403
+ },
+ "/rest/migration/1.0/app/consent": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/app/consent/allowAppMigrationsDataShare": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/app/list/neededInCloud": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/app/stats": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/app/usage": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/browser-metrics/enabled": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/migration/1.0/cloud": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/cloud/rememberLegalOptIn": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/cluster/panic": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/debug/assess/l1": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/debug/email/remove-all-domain-rules": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/debug/email/trust-all-domains": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/debug/mma/view-space-data": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/debug/serverId": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/debug/status/plan": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/email/domain-rules": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/email/domains": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/encryption/validate": {
+  "admin": 400,
+  "user": 403
+ },
+ "/rest/migration/1.0/featureflag/all": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/featureflag/statsig/configs": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/incorrect-email/duplicated/config": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/incorrect-email/invalid/config": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/instance/assessment/job": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/instance/assessment/job/csv": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/instance/assessment/job/csv/example": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/instance/assessment/job/schedule": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/instance/assessment/job/totalduration": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/instance/assessment/macros": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/instance/info": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/migrated": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/plan": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/plan/validate/nameExists": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/settings": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/space": {
+  "admin": 400,
+  "user": 403
+ },
+ "/rest/migration/1.0/stats/globalEntities": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/stats/server": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/stats/usersGroups": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/user-mapping/config": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/user-mapping/download/availability": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/user-mapping/mappings": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/user-mapping/statistics": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/user-mapping/upload/summary": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/user-mapping/upload/summary/invalid-emails": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/migration/1.0/userbase/scan/summary": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/mobile/1.0/stream/network": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/mobile/1.0/stream/recentblogs": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/mywork-client/1/host/appid": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/mywork-client/1/registration": {
+  "admin": 404,
+  "user": 404
+ },
+ "/rest/mywork/1/configuration": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/mywork/1/loggedInUser": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/mywork/1/notification": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/mywork/1/notification/nested": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/mywork/1/status": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/mywork/1/status/notification/count": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/mywork/1/status/notification/new": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/mywork/1/task": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/mywork/1/task/count": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/mywork/1/timeout": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/nativemobile/1.0/card": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/nativemobile/1.0/content/creation/metadata": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/nativemobile/1.0/content/favourites": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/nativemobile/1.0/content/save": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/nativemobile/1.0/info/login": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/nativemobile/1.0/info/server": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/nativemobile/1.0/linkextractor": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/nativemobile/1.0/location/page/creation": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/nativemobile/1.0/notification": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/nativemobile/1.0/push-notification/status": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/nativemobile/1.0/space": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/nativemobile/1.0/user/concurent-editing": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/nativemobile/1.0/user/current": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/notifications/1.0/addoptions": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/notifications/1.0/queue": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/notifications/1.0/scheme": {
+  "admin": 200,
+  "user": 401
+ },
+ "/rest/oauth2-client/1.0/config": {
+  "admin": 400,
+  "user": 403
+ },
+ "/rest/oauth2-client/1.0/config/get-redirect-uri": {
+  "admin": 400,
+  "user": 403
+ },
+ "/rest/oauth2-client/1.0/config/is-name-unique": {
+  "admin": 400,
+  "user": 403
+ },
+ "/rest/oauth2/1.0/.well-known/oauth-authorization-server": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/oauth2/1.0/authorize": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/oauth2/1.0/client": {
+  "admin": 400,
+  "user": 403
+ },
+ "/rest/oauth2/1.0/internal/scopes/available": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/office/1.0/authtoken": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/office/1.0/view": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/onboarding/1/draft/generate": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/onboarding/1/space": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/onboarding/1/space/generate": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/onboarding/1/space/relevant": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/onboarding/1/store": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/onboarding/1/store/global": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/page-hierarchy/incoming/count": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/pat/1.0/tokens": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/pat/1.0/tokens/search/user": {
+  "admin": 200,
+  "user": 401
+ },
+ "/rest/plugins/1.0": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/plugins/1.0/available": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/plugins/1.0/banners": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/plugins/1.0/build-number": {
+  "admin": 412,
+  "user": 403
+ },
+ "/rest/plugins/1.0/bundles": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/plugins/1.0/categories": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/plugins/1.0/certificates": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/plugins/1.0/enablement-state": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/plugins/1.0/installed-marketplace": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/plugins/1.0/log/feed": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/plugins/1.0/log/feed/max-entries": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/plugins/1.0/log/feed/purge-after": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/plugins/1.0/monitor/installed": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/plugins/1.0/notifications": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/plugins/1.0/pac-status": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/plugins/1.0/packages": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/plugins/1.0/pending": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/plugins/1.0/product-updates": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/plugins/1.0/product-version": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/plugins/1.0/purchased/available": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/plugins/1.0/purchased/update/signed": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/plugins/1.0/requests": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/plugins/1.0/requests-status": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/plugins/1.0/requires-restart": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/plugins/1.0/safe-mode": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/plugins/1.0/self-update-completed": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/plugins/1.0/services": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/plugins/1.0/settings": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/plugins/1.0/sys/dev-mode": {
+  "admin": 412,
+  "user": 403
+ },
+ "/rest/plugins/1.0/tasks": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/plugins/1.0/tasks/default": {
+  "admin": 404,
+  "user": 404
+ },
+ "/rest/plugins/1.0/test/bundle-id": {
+  "admin": 412,
+  "user": 403
+ },
+ "/rest/plugins/1.0/test/scheduler": {
+  "admin": 412,
+  "user": 403
+ },
+ "/rest/plugins/1.0/upm-sys/auto-install-remote-plugins": {
+  "admin": 412,
+  "user": 403
+ },
+ "/rest/plugins/1.0/upm-sys/check-license": {
+  "admin": 412,
+  "user": 403
+ },
+ "/rest/plugins/1.0/upm-sys/data-center": {
+  "admin": 412,
+  "user": 403
+ },
+ "/rest/plugins/1.0/upm-sys/mail-server": {
+  "admin": 412,
+  "user": 403
+ },
+ "/rest/plugins/1.0/upm-sys/purchased-addons": {
+  "admin": 412,
+  "user": 403
+ },
+ "/rest/plugins/1.0/upm-sys/sen": {
+  "admin": 412,
+  "user": 403
+ },
+ "/rest/plugins/1.0/user-key": {
+  "admin": 412,
+  "user": 412
+ },
+ "/rest/plugins/1.0/user-settings": {
+  "admin": 401,
+  "user": 200
+ },
+ "/rest/popular/1/stream/content": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/previews/templinksresource/attachmenturl": {
+  "admin": 404,
+  "user": 404
+ },
+ "/rest/previews/templinksresource/companion/attachment": {
+  "admin": 404,
+  "user": 404
+ },
+ "/rest/previews/templinksresource/companion/attachment-usage-status": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/previews/templinksresource/companion/link": {
+  "admin": 404,
+  "user": 404
+ },
+ "/rest/prototype/1": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/prototype/1/attachment": {
+  "admin": 404,
+  "user": 404
+ },
+ "/rest/prototype/1/breadcrumb": {
+  "admin": 404,
+  "user": 404
+ },
+ "/rest/prototype/1/buildInfo": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/prototype/1/buildInfo/history": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/prototype/1/content": {
+  "admin": 404,
+  "user": 404
+ },
+ "/rest/prototype/1/i18n": {
+  "admin": 404,
+  "user": 404
+ },
+ "/rest/prototype/1/index/reindex": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/prototype/1/search": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/prototype/1/search/group": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/prototype/1/search/name": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/prototype/1/search/site": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/prototype/1/search/user": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/prototype/1/search/user-or-group": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/prototype/1/session": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/prototype/1/session/history": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/prototype/1/space": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/prototype/1/user/current": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/prototype/1/user/system/anonymous": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/quicknav/1/search": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/rate-limiting/1.0/admin/rate-limit/history": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/rate-limiting/1.0/admin/rate-limit/settings": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/rate-limiting/1.0/admin/rate-limit/settings/users": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/rate-limiting/1.0/admin/rate-limit/settings/users/anonymous": {
+  "admin": 404,
+  "user": 403
+ },
+ "/rest/rate-limiting/1.0/admin/rate-limit/settings/users/exemptionsLimit": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/rate-limiting/1.0/admin/rate-limit/users/picker": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/rate-limiting/1.0/admin/v2/rate-limit/settings": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/rate-limiting/1.0/admin/v2/rate-limit/settings/users": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/rate-limiting/1.0/admin/v2/rate-limit/users/picker": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/rate-limiting/1.0/users/app-icon": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/rebuildindex/1/job": {
+  "admin": 404,
+  "user": 403
+ },
+ "/rest/recentlyviewed/1.0/recent": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/recentlyviewed/1.0/recent/pages": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/recentlyviewed/1.0/recent/spaces": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/remote-page-view/1.0/token": {
+  "admin": 403,
+  "user": 403
+ },
+ "/rest/retentionpolicy/1": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/retentionpolicy/1/job": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/retentionpolicy/1/space/search/all": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/retentionpolicy/1/space/search/policy": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/searchv3/1.0/cqlSearch": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/searchv3/1.0/search": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/secrets/1.0/keys/inactive": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/secure-tunneling/1.0/tunnel": {
+  "admin": 404,
+  "user": 403
+ },
+ "/rest/service-accounts/1/resources": {
+  "admin": 400,
+  "user": 403
+ },
+ "/rest/service-accounts/1/resources/types": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/service-accounts/1/service-accounts": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/sharelinks/1.0/can-create-comment": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/sharelinks/1.0/external-links-enabled": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/sharelinks/1.0/link": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/sourceeditor/1.0/access": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/spacedirectory/1/limitedsearch": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/spacedirectory/1/search": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/static-asset-caching/configuration": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/static-asset-caching/configuration/test": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/static-asset-caching/health-checks": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/static-asset-caching/network-statistics": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/synchrony-interop/configuration": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/synchrony-interop/status": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/synchrony-interop/synchrony-status": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/synchrony/1.0/config/status": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/tinymce/1/createlink/placeholder": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/tinymce/1/drafts": {
+  "admin": 422,
+  "user": 422
+ },
+ "/rest/tinymce/1/drafts/message": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/tinymce/1/link/placeholder": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/token-auth/api/accessmode": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/admin/users/list/active": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/audit": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/backup-restore/jobs": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/backup-restore/restore/files": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/cluster/nodes": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/color-scheme": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/color-scheme/default": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/content": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/content/scan": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/content/search": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/group": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/group/groupancestor": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/group/groupmember": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/group/groupparent": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/group/info": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/group/member": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/index/reindex": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/instance-metrics": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/label/labels": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/label/popular": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/label/recent": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/longtask": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/permissions": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/permissions/anonymous": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/permissions/unlicensed": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/previews/templinksresource/attachmenturl": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/previews/templinksresource/companion/attachment": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/previews/templinksresource/companion/attachment-usage-status": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/previews/templinksresource/companion/link": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/search": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/server-information": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/space": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/user": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/user/anonymous": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/user/current": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/user/list": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/user/memberof": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/token-auth/api/webhooks": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/tsv/1.0/authenticate/captcha": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/tsv/1.0/elevate-permissions": {
+  "admin": 401,
+  "user": 401
+ },
+ "/rest/tsv/1.0/sso-management-status": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/tsv/1.0/status": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/ui/1.0/people/anonymous": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/user-management/1.0/groups": {
+  "admin": 200,
+  "user": 401
+ },
+ "/rest/user-management/1.0/users": {
+  "admin": 200,
+  "user": 401
+ },
+ "/rest/viewsrc/1.0/getPageSrc": {
+  "admin": 404,
+  "user": 404
+ },
+ "/rest/webResources/1.0/deprecatedDescriptors": {
+  "admin": 200,
+  "user": 403
+ },
+ "/rest/webResources/1.0/resources": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/whisper/1/messages": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/whisper/1/properties": {
+  "admin": 400,
+  "user": 400
+ },
+ "/rest/whitelist/1": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/whitelist/1/check": {
+  "admin": 500,
+  "user": 500
+ },
+ "/rest/whitelist/1/settings": {
+  "admin": 200,
+  "user": 200
+ },
+ "/rest/wrm/2.0/requestables": {
+  "admin": 200,
+  "user": 200
+ }
+}
