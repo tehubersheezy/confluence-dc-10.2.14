@@ -1,0 +1,152 @@
+anchor | v1 | NONE | Anchor | confluence.macros.basic
+    "":string!
+attachments | v1 | NONE | Attachments | confluence.extra.attachments
+    patterns:string; labels:string; old:boolean=true; preview:boolean=true; sortBy:enum[date|createddate|size|name]=date; sortOrder:enum[ascending|descending]=ascending; upload:boolean=true; page:confluence-content
+blog-posts | v1 | NONE | Blog Posts | confluence.macros.advanced
+    content:enum[titles|excerpts|entire]=entire!; time:relativedate; labels:string (alias label); author:username+; spaces:spacekey (alias space); max:int=100 (alias maxResults); sort:enum[title|creation|modified]; reverse:boolean=false
+calendar | v1 | NONE | Team Calendars | com.atlassian.confluence.extra.team-calendars
+    id:string! (alias subCalendars); defaultView:enum[month|week|list|timeline]=month; width:int; height:int; showLegend:enum[none|bottom|right]=bottom; hideWeekends:boolean=false
+change-history | v1 | NONE | Change History | confluence.macros.advanced
+    limit:int
+chart | v1 | RICH_TEXT | Chart | confluence.extra.chart
+    type:enum[pie|bar|line|area|xyArea|xyBar|xyLine|xyStep|xyStepArea|scatter|timeSeries|gantt]=pie; orientation:enum[vertical|horizontal]; 3D:boolean=false; stacked:boolean=false; showShapes:boolean=true; opacity:int; width:int; height:int; dataDisplay:enum[before|after]; imageFormat:enum[png|jpg]; title:string; subTitle:string; xLabel:string; yLabel:string; legend:boolean=true; altText:string; tables:string; columns:string; dataOrientation:enum[horizontal|vertical]; timeSeries:boolean=false; dateFormat:string; timePeriod:enum[Millisecond|Second|Minute|Hour|Day|Week|Month|Quarter|Year]; language:string; country:string; forgive:boolean=true; bgColor:color; borderColor:color; colors:color+; rangeAxisLowerBound:int; rangeAxisUpperBound:int; rangeAxisTickUnit:int; rangeAxisLabelAngle:int; domainAxisLowerBound:int; domainAxisUpperBound:int; domainAxisTickUnit:int; domainAxisLabelAngle:string; categoryLabelPosition:string; dateTickMarkPosition:string; pieSectionLabel:string; pieSectionExplode:string; attachment:string; attachmentVersion:enum[new|replace|keep]; attachmentComment:string; thumbnail:boolean=false
+cheese | v1 | NONE | Cheese | confluence.macros.basic
+    
+children | v2 | NONE | Children Display | confluence.macros.advanced
+    all:boolean=false; page:confluence-content; first:int; depth:int; style:enum[h1|h2|h3|h4|h5|h6]; excerptType:enum[none|simple|rich content]=none; sort:enum[creation|title|modified]; reverse:boolean=false
+code | v1 | PLAIN_TEXT | Code Block | com.atlassian.confluence.ext.newcode-macro-plugin
+    language:string; title:string; collapse:boolean=false; linenumbers:boolean=false; firstline:string
+column | v1 | RICH_TEXT | Column | confluence.extra.layout
+    width:string
+content-by-user | v1 | NONE | Content by User | confluence.macros.advanced
+    "":username!
+content-report-table | v1 | NONE | Content Report Table | com.atlassian.confluence.plugins.confluence-content-report-plugin
+    labels:string!; spaces:spacekey+; showCommentsCount:boolean=false; showLikesCount:boolean=false; maxResults:int=20
+contentbylabel | v3 | NONE | Content by Label | confluence.macros.advanced
+    cql:cql!; sort:enum[title|creation|modified]; reverse:boolean=false; max:int=15 (alias maxResults); title:string; showLabels:boolean=true; showSpace:boolean=true; excludeCurrent:boolean=false; excerptType:enum[none|simple|rich content]=none
+contributors | v1 | NONE | Contributors | com.atlassian.confluence.contributors
+    include:enum[authors|comments|labels|watches]+=authors; order:enum[count|name|update]=count; reverse:boolean=false; limit:int; mode:enum[inline|list]=inline; showAnonymous:boolean=false; showCount:boolean=false; showLastTime:boolean=false; page:confluence-content; labels:label+; spaces:spacekey+; contentType:enum[pages|blogposts]; publishDate:date; scope:enum[children|descendants]; showPages:boolean=false; noneFoundMessage:string
+contributors-summary | v1 | NONE | Contributors Summary | com.atlassian.confluence.contributors
+    groupby:enum[contributors|pages]=contributors; columns:enum[edits|edited|comments|commented|labels|labeled|labellist|watches|watching|lastupdate]+=edits,comments,labels; order:enum[edits|name|editTime|update]=edits; reverse:boolean=false; limit:int; showAnonymous:boolean=false; showZeroCounts:boolean=false; page:confluence-content; labels:label+; spaces:spacekey+; contentType:enum[pages|blogposts]; publishDate:date; scope:enum[children|descendants]
+create-from-template | v1 | NONE | Create from template | com.atlassian.confluence.plugins.confluence-create-content-plugin
+    buttonLabel:string; templateName:enum!; title:string; spaceKey:spacekey
+create-space-button | v1 | NONE | Create Space Button | confluence.macros.dashboard
+    size:enum[small|large]=large
+details | v1 | RICH_TEXT | Page properties | confluence.extra.masterdetail
+    id:string (alias label); hidden:boolean=false
+detailssummary | v2 | NONE | Page properties report | confluence.extra.masterdetail
+    cql:cql=space = currentSpace()!; id:string; firstcolumn:string; headings:string; pageSize:string=30; sortBy:string; reverseSort:boolean=false; showCommentsCount:boolean=false; showLikesCount:boolean=false
+excerpt | v1 | RICH_TEXT | Excerpt | confluence.macros.advanced
+    hidden:boolean=false
+excerpt-include | v1 | NONE | Excerpt Include | confluence.macros.advanced
+    "":confluence-content!; nopanel:boolean=false
+expand | v1 | RICH_TEXT | Expand | com.atlassian.confluence.plugins.expand-macro
+    title:string=Click here to expand...
+favpages | v1 | NONE | Favourite Pages | confluence.macros.advanced
+    
+gallery | v1 | NONE | Gallery | confluence.macros.advanced
+    title:string; columns:int=4; exclude:string; include:string; excludeLabel:string; includeLabel:string; page:string; sort:enum[name|comment|date|size]; reverse:boolean=false
+global-reports | v1 | NONE | Global Reports | confluence.macros.dashboard
+    width:percentage
+include | v1 | NONE | Include Page | confluence.macros.advanced
+    "":confluence-content!
+index | v1 | NONE | Page Index | confluence.macros.advanced
+    
+info | v1 | RICH_TEXT | Info | confluence.extra.information
+    title:string; icon:boolean=true
+jira | v1 | NONE | Jira | confluence.extra.jira
+    key:string; jqlQuery:string; server:string!; serverId:string; serverUrl:string; showSummary:boolean=true
+jirachart | v1 | NONE | Jira Charts | confluence.extra.jira
+    server:string!
+jiraissues | v1 | NONE | Jira Issues | confluence.extra.jira | HIDDEN
+    url:url!; columns:string; count:boolean=false; cache:enum[on|off]=on; anonymous:boolean=false; width:string=100%; height:int=480; title:string; renderMode:enum[dynamic|static]=dynamic; showSummary:boolean=true
+listlabels | v1 | NONE | Labels List | confluence.macros.advanced
+    count:int=100; spaceKey:spacekey; excludedLabels:label+
+livesearch | v1 | NONE | Livesearch | confluence.extra.livesearch
+    spaceKey:spacekey; labels:string; size:enum[medium|large]=medium; placeholder:string; type:enum[all|page|blogpost|comment|spacedesc]=all; additional:enum[none|space name|page excerpt]=space name
+loremipsum | v1 | NONE | Loremipsum | confluence.macros.basic
+    "":int=3
+multimedia | v1 | NONE | confluence.macros.multimedia.multimedia.label | confluence.macros.multimedia
+    page:confluence-content; name:attachment! (alias ); width:int; height:int; autostart:boolean=false
+navmap | v1 | NONE | Navigation Map | confluence.macros.advanced
+    "":string!; title:string; wrapAfter:int=5; cellWidth:string=90px; cellHeight:string=60px; theme:string
+network | v1 | NONE | Network | confluence.macros.profile | HIDDEN
+    username:username; "":enum[following|followers]!; theme:enum[full|tiny]; max:int (alias maxResult)
+noformat | v1 | PLAIN_TEXT | No Format | confluence.macros.basic
+    nopanel:boolean=false
+note | v1 | RICH_TEXT | Note | confluence.extra.information
+    title:string; icon:boolean=true
+pagetree | v1 | NONE | Page Tree | com.atlassian.confluence.plugins.pagetree
+    root:confluence-content; spaces:spacekey (alias space); sort:enum[bitwise|creation|modified|natural|position]=position; excerpt:boolean=false; reverse:boolean=false; searchBox:boolean=false; expandCollapseAll:boolean=false; startDepth:int=1
+pagetreesearch | v1 | NONE | Page Tree Search | com.atlassian.confluence.plugins.pagetree
+    rootPage:string
+panel | v1 | RICH_TEXT | Panel | confluence.macros.basic
+    title:string; borderStyle:string; borderColor:color; borderWidth:string; bgColor:color; titleBGColor:color; titleColor:color
+popular-labels | v1 | NONE | Popular Labels | confluence.macros.advanced
+    count:int=100; spaceKey:spacekey; style:enum[list|heatmap]=list
+portfolio-for-jira-plan | v1 | NONE | Advanced Roadmaps for Jira in Confluence | com.atlassian.confluence.plugins.confluence-portfolio-server-macro
+    url:string!; height:string!
+profile | v1 | NONE | User Profile | confluence.macros.profile
+    user:username!
+profile-picture | v1 | NONE | com.atlassian.confluence.plugins.profile-picture.profile-picture.label | com.atlassian.confluence.plugins.profile-picture
+    User:username!
+recently-updated | v1 | NONE | Recently Updated | confluence.macros.advanced
+    author:username+; spaces:spacekey+ (alias space); labels:string (alias label); width:percentage=100%; types:string (alias type); max:int=15 (alias maxResults); theme:enum[concise|social|sidebar]; showProfilePic:boolean=false; hideHeading:boolean=false
+recently-updated-dashboard | v1 | NONE | Recently Updated Dashboard | confluence.macros.dashboard
+    spaces:spacekey+; types:string+; labels:string+; users:username+; width:percentage=100%; showProfilePic:boolean=false
+recently-used-labels | v1 | NONE | Recently Used Labels | confluence.macros.advanced
+    count:int=10; scope:enum[global|space|personal]=global; style:enum[list|table]=list; title:string
+related-labels | v1 | NONE | Related Labels | confluence.macros.advanced
+    labels:string
+roadmap | v1 | NONE | Roadmap Planner | com.atlassian.confluence.plugins.confluence-roadmap-plugin
+    source:string!; pagelinks:confluence-content+; maplinks:string
+rss | v1 | NONE | RSS Feed | confluence.macros.html
+    url:url!; max:int=15; showTitlesOnly:boolean=false; titleBar:boolean=true
+search | v1 | NONE | Search Results | confluence.macros.advanced | HIDDEN
+    query:string!; maxLimit:int; spacekey:spacekey; type:enum[page|comment|blogpost|attachment|userinfo|spacedesc]; lastModified:relativedate; contributor:username
+section | v1 | RICH_TEXT | Section | confluence.extra.layout
+    border:boolean=false
+sharelinks-urlmacro | v1 | NONE | Shared Links Bookmarklet Button | com.atlassian.confluence.plugins.confluence-business-blueprints
+    
+space-attachments | v1 | NONE | Space attachments | confluence.extra.attachments
+    space:spacekey; showFilter:boolean=true
+space-details | v1 | NONE | Space Details | confluence.macros.dashboard | HIDDEN
+    width:percentage
+spaces | v1 | NONE | Spaces List | confluence.macros.dashboard
+    "":enum[all|category|favourite|new]; width:percentage=100%; includeArchivedSpaces:boolean=false
+status | v1 | NONE | Status | com.atlassian.confluence.plugins.status-macro
+    title:string; colour:enum[Grey|Red|Yellow|Green|Blue]=Grey! (alias color); subtle:boolean=false
+tasklist | v1 | PLAIN_TEXT | Tasklist | confluence.extra.dynamictasklist2 | HIDDEN
+    title:string; width:string; enableLocking:boolean=false; promptOnDelete:boolean=false
+tasks-report-macro | v1 | NONE | Task report | com.atlassian.confluence.plugins.confluence-inline-tasks
+    spaceAndPage:string+; labels:label+; assignees:username+; creators:username+; createddateFrom:date; status:enum[complete|incomplete]=incomplete; pageSize:enum[10|20|40]=20; columns:string=description,duedate,assignee,location; sortBy:enum[due date|assignee|page title]=due date; reverseSort:boolean=false
+tip | v1 | RICH_TEXT | Tip | confluence.extra.information
+    title:string; icon:boolean=true
+toc | v1 | NONE | Table of Contents | org.randombits.confluence.toc
+    type:enum[list|flat]=list; outline:boolean=false; style:string=default; indent:string; separator:string=brackets; minLevel:int=1; maxLevel:int=7; include:string; exclude:string; printable:boolean=true; class:string; absoluteUrl:boolean=false
+toc-zone | v1 | RICH_TEXT | Table of Content Zone | org.randombits.confluence.toc
+    location:enum[both|top|bottom]=both; type:enum[list|flat]=list; outline:boolean=false; style:string=default; indent:string; separator:string=brackets; minLevel:int=1; maxLevel:int=7; include:string; exclude:string; printable:boolean=true; class:string
+unmigrated-inline-wiki-markup | v1 | PLAIN_TEXT | Wiki Markup | confluence.xhtml.wikimarkup | HIDDEN
+    
+unmigrated-wiki-markup | v1 | PLAIN_TEXT | Wiki Markup | confluence.xhtml.wikimarkup | HIDDEN
+    
+userlister | v1 | NONE | User List | confluence.extra.userlister
+    groups:group+!; online:enum[true|false]
+view-file | v1 | NONE | com.atlassian.confluence.plugins.confluence-view-file-macro.view-file.label | com.atlassian.confluence.plugins.confluence-view-file-macro | HIDDEN
+    page:confluence-content; space:spacekey; date:date; name:full_attachment! (alias )
+viewdoc | v1 | NONE | Office Word | com.atlassian.confluence.extra.officeconnector
+    page:confluence-content; name:attachment! (alias )
+viewfile | v1 | NONE | View File | com.atlassian.confluence.extra.officeconnector | HIDDEN
+    name:attachment! (alias ); page:confluence-content; height:string; width:string; slide:int; grid:boolean=true; row:int; col:int; sheet:string
+viewpdf | v1 | NONE | PDF | com.atlassian.confluence.extra.officeconnector
+    page:confluence-content; name:attachment! (alias )
+viewppt | v1 | NONE | Office Powerpoint | com.atlassian.confluence.extra.officeconnector
+    page:confluence-content; name:attachment! (alias ); slide:int; height:string; width:string
+viewxls | v1 | NONE | Office Excel | com.atlassian.confluence.extra.officeconnector
+    page:confluence-content; name:attachment! (alias ); grid:boolean=true; sheet:string; row:int; col:int
+warning | v1 | RICH_TEXT | Warning | confluence.extra.information
+    title:string; icon:boolean=true
+welcome-message | v1 | NONE | Welcome Message | confluence.macros.dashboard | HIDDEN
+    
+widget | v1 | NONE | Widget Connector | com.atlassian.confluence.extra.widgetconnector
+    url:url!; width:int; height:int
